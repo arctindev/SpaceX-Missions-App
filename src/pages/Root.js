@@ -1,10 +1,11 @@
 import React from 'react';
+import Template from '../template/template';
 
 const Root = () => {
   return (
-    <div className="App">
+    <Template>
       <h1>Hello world</h1>
-    </div>
+    </Template>
   );
 };
 
