@@ -1,11 +1,11 @@
 import React from 'react';
-import SvgBackground from '../components/SvgBackground/SvgBackground';
 import { TemplateWrapper } from './template.styles';
+import { Header } from '../components/Header/Header';
 
 const Template = ({ children }) => {
   return (
     <TemplateWrapper>
-      {/* <SvgBackground /> */}
+      <Header />
       {children}
     </TemplateWrapper>
   );

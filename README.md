@@ -1,17 +1,21 @@
 To run this project u have to clone repo, open folder which includes package.json and write in terminal
+
 - npm install
 - then npm run start
 
 TO-DO List:
+
 1. Initial setup. (Done)
 2. Background gradient. (Done)
-    - First try was to develop gradient by using linear-gradient css property, (the color breakpoints are so hard to develop )
 
-    - then i tried a vector graphic gradient, by using SVG, created x1,y1 and x2,y2 points for background but still the efect was not as good as exprected.
+   - First try was to develop gradient by using linear-gradient css property, (the color breakpoints are so hard to develop )
 
-    - then i imported the background as jpg file from figma and centered it, the quality of jpg might not be the best but with this solution the background is looking way better than svg and linear-gradient try,
-3. Creating basic layout template, developing mobile first.
-4. Creating Header component.
+   - then i tried a vector graphic gradient, by using SVG, created x1,y1 and x2,y2 points for background but still the efect was not as good as exprected.
+
+   - then i imported the background as jpg file from figma and centered it, the quality of jpg might not be the best but with this solution the background is looking way better than svg and linear-gradient try,
+
+3. Creating basic layout template, developing mobile first. (Done)
+4. Creating Header component. (Done)
 5. Checking api response and mocking mission data as js file.
 6. Creating MissionDetailsSection component.
 7. Creating ShipCard component.
@@ -29,4 +33,3 @@ TO-DO List:
 16. Creating error catching for api request.
 17. Writing some unit and integration tests by using testing-library.
 18. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page / or try to improve gradient background by using css or svg.
-

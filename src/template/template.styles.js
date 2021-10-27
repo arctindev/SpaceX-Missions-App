@@ -8,7 +8,11 @@ export const TemplateWrapper = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* background: linear-gradient(
+  display: grid;
+  grid-template-rows: 86px 1fr;
+`;
+
+/* background: linear-gradient(
     120deg,
   rgba(0,0,0,1) 0%,
   rgba(0,0,0,0.738) 19%,
@@ -24,4 +28,3 @@ export const TemplateWrapper = styled.div`
   rgba(0,0,0,0.002) 98.2%,
   rgba(0,0,0,0) 100%
 ); */
-`;

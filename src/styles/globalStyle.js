@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     font-family: "roboto";
     /* background: #323237;  background color for linear gradient*/
-    background: ${({theme}) => theme.backgroundColor.linearBlack};
+    background: ${({ theme }) => theme.backgroundColor.linearBlack};
   }
 `;
 
