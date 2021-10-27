@@ -3,7 +3,7 @@ import backgroundImage from '../assets/background.jpg';
 
 export const TemplateWrapper = styled.div`
   width: 100%;
-  height: 300vh;
+  min-height: 100vh;
   background: url(${backgroundImage});
   background-size: cover;
   background-repeat: no-repeat;
