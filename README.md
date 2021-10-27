@@ -16,7 +16,7 @@ TO-DO List:
 
 3. Creating basic layout template, developing mobile first. (Done)
 4. Creating Header component. (Done)
-5. Checking api response and mocking mission data as js file.
+5. Checking api response and mocking mission data as js file. (Done)
 6. Creating MissionDetailsSection component.
 7. Creating ShipCard component.
 8. Creating ShipSection component.
