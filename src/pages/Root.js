@@ -1,12 +1,14 @@
 import React from 'react';
 import Template from '../template/template';
+import { PageContentWrapper } from '../components/PageContentWrapper/PageContentWrapper.styles';
+import MissionDetailsSection from '../components/MissionDetailsSection/MissionDetailsSection';
 
 const Root = () => {
   return (
     <Template>
-      <div>
-        <h1>Hello world</h1>
-      </div>
+      <PageContentWrapper>
+        <MissionDetailsSection />
+      </PageContentWrapper>
     </Template>
   );
 };

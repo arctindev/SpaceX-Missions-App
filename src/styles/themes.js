@@ -4,7 +4,7 @@ export const theme = {
     linearBlack: '#000000',
   },
   componentColor: {
-    orange: '#BE4E35',
+    red: '#BE4E35',
     green: '#6FB46E',
     white: '#FFFFFF',
     darkerWhite: '#F4F6FA',
@@ -16,8 +16,9 @@ export const theme = {
     white: '#FFFFFF',
   },
   fontSize: {
-    xl: '34px',
-    l: '24px',
+    xl: '49px',
+    l: '34px',
+    xm: '24px',
     m: '16px',
     s: '14px',
     xs: '12px',
