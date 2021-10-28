@@ -17,4 +17,13 @@ export const ArrowWrapper = styled.button`
           : theme.componentColor.grey};
     }
   }
+  @media only screen and (min-width: 768px) {
+    left: ${({ arrowType }) => (arrowType === 'left' ? '30px' : 'auto')};
+    right: ${({ arrowType }) => (arrowType === 'right' ? '30px' : 'auto')};
+  }
+
+  @media only screen and (min-width: 1200px) {
+    left: ${({ arrowType }) => (arrowType === 'left' ? '0px' : 'auto')};
+    right: ${({ arrowType }) => (arrowType === 'right' ? '0px' : 'auto')};
+  }
 `;

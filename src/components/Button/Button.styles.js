@@ -6,11 +6,22 @@ export const StyledButton = styled.button`
   color: ${({ theme }) => theme.fontColor.white};
   border: 2px solid ${({ theme }) => theme.componentColor.white};
   cursor: pointer;
-  margin: auto;
   margin-bottom: 27px;
   line-height: 16.41px;
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: 500;
   width: 100%;
-  max-width: 520px;
+
+  &:hover {
+    background-color: ${({ theme }) => theme.componentColor.white + '15'};
+  }
+
+  &:active {
+    background: none;
+  }
+
+  @media only screen and (min-width: 768px) {
+    margin-bottom: 40px;
+    width: 160px;
+  }
 `;

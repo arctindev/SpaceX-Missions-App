@@ -2,6 +2,7 @@ To run this project u have to clone repo, open folder which includes package.jso
 
 - npm install
 - then npm run start
+- then run this website link http://localhost:3000
 
 TO-DO List:
 
@@ -20,17 +21,19 @@ TO-DO List:
 6. Creating MissionDetailsSection component. (Done)
 7. Creating ShipCard component. (Done)
 8. Creating ShipSection component. (Done)
-9. Checking 320 width app view for smallest mobile device.
-10. Creating Desktop view.
-11. Checking how website looks on higher resolutions. (4k)
-12. Creating basic tablet view.
+9. Checking 320 width app view for smallest mobile device. (Done)
+10. Creating Desktop view. (Done)
+    - Reminder for changing logo size on desktop.
+11. Checking how website looks on higher resolutions. (4k) (Done)
+12. Creating basic tablet view. (Done)
 13. Creating api request by using axios or RTQ query.
 14. Creating change mission feature.
     Posible solutions:
     - i could create the router and after clicking the arrow i could fetch single mission data. It means every time user navigates to another mission, data will be fetched.
     - i could create redux store, and by using RTK query the data will be fetched only 1 time, for example for 5 missions, then the data will be stored in redux store and user could check mission data even if his internet connetion has dropped. Maybe after navigating for 5th mission rtk query will fetch another 5 missions, not sure yet.
-15. Refactoring image resising for ShipCard.
-16. Checking the website on another browsers than firefox.
-17. Creating error catching for api request.
-18. Writing some unit and integration tests by using testing-library.
-19. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page / or try to improve gradient background by using css or svg.
+15. Refactoring image resizing for ShipCard.
+16. Adding sort filter for query to get last 5 missions.
+17. Checking the website on another browsers than firefox.
+18. Creating error catching for api request.
+19. Writing some unit and integration tests by using testing-library.
+20. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page / or try to improve gradient background by using css or svg.

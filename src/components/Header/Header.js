@@ -1,14 +1,17 @@
 import React from 'react';
 import { HeaderWrapper } from './Header.styles';
-import { ReactComponent as MobileLogoSVG } from '../../assets/logoMobile.svg';
+import { ReactComponent as LogoSVG } from '../../assets/logo.svg';
 import { SvgArrow } from '../SvgArrow/SvgArrow';
+import { Navigation } from './Header.styles';
 
 export const Header = () => {
   return (
     <HeaderWrapper>
-      <SvgArrow isActive={false} arrowType="left" />
-      <MobileLogoSVG />
-      <SvgArrow arrowType="right" />
+      <Navigation>
+        <SvgArrow isActive={false} arrowType="left" />
+        <LogoSVG />
+        <SvgArrow arrowType="right" />
+      </Navigation>
     </HeaderWrapper>
   );
 };

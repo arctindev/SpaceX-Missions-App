@@ -7,20 +7,40 @@ export const ShipCardWrapper = styled.div`
   background-color: ${({ theme }) => theme.componentColor.white};
   border-radius: 20px;
   margin-bottom: 20px;
+  @media only screen and (min-width: 768px) {
+    max-width: 520px;
+    width: calc(50% - 10px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    &:nth-of-type(2n) {
+      margin-right: 0px;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    max-width: 360px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    &:nth-of-type(2n) {
+      margin-right: 30px;
+    }
+    &:nth-of-type(3n) {
+      margin-right: 0px;
+    }
+  }
 `;
 
 export const ShipImage = styled.img`
   width: 100%;
   height: 200px;
   object-fit: cover;
-  object-position: center;
+  object-position: 50% 65%;
   border-radius: 20px 20px 0px 0px;
 `;
 
 export const ShipNameHeading = styled.h2`
   font-weight: 700;
   line-height: 24px;
-  font-size: ${({ theme }) => theme.fontSize.xm};
+  font-size: ${({ theme }) => theme.fontSize.l};
   color: ${({ theme }) => theme.fontColor.black};
   padding-bottom: 16px;
   border-bottom: 1px solid ${({ theme }) => theme.componentColor.lightGrey};
@@ -36,7 +56,7 @@ export const DataLabelWrapper = styled.div`
 `;
 
 export const DataHeading = styled.h3`
-  width: 82px;
+  min-width: 82px;
   font-size: ${({ theme }) => theme.fontSize.xs};
   color: ${({ theme }) => theme.fontColor.grey};
   line-height: 24px;
