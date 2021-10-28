@@ -9,9 +9,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     font-size: 16px;
+    font-weight: 500;
   }
   body {
     font-family: "roboto";
+    /* background: #323237;  background color for linear gradient*/
+    background: ${({ theme }) => theme.backgroundColor.linearBlack};
   }
 `;
 
