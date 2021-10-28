@@ -24,7 +24,14 @@ const MissionDetailsSection = ({ missionData = {} }) => {
           data={missionData.rocket.rocket_name}
           type="rocket_name_label"
         />
-        <Button buttonText="LEARN MORE" />
+        <Button
+          articleLink={
+            !missionData.links.article_link
+              ? missionData.links.video_link
+              : missionData.links.article_link
+          }
+          buttonText="LEARN MORE"
+        />
       </FlexColumnWrapper>
       <FlexColumnWrapper>
         <DataLabel
