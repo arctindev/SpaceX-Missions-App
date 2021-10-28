@@ -8,9 +8,7 @@ const AppProviders = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <MissionProvider>
-        {children}
-      </MissionProvider>
+      <MissionProvider>{children}</MissionProvider>
     </ThemeProvider>
   );
 };

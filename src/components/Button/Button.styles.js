@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.a`
   padding: 19px 0;
   background: none;
   color: ${({ theme }) => theme.fontColor.white};
@@ -11,7 +11,8 @@ export const StyledButton = styled.button`
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: 500;
   width: 100%;
-
+  text-decoration: none;
+  text-align: center;
   &:hover {
     background-color: ${({ theme }) => theme.componentColor.white + '15'};
   }

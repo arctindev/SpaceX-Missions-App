@@ -5,7 +5,11 @@ import { ReactComponent as ArrowRight } from '../../assets/rightArrow.svg';
 
 export const SvgArrow = (props) => {
   return (
-    <ArrowWrapper {...props} isActive={props.isActive} arrowType={props.arrowType}>
+    <ArrowWrapper
+      {...props}
+      isActive={props.isActive}
+      arrowType={props.arrowType}
+    >
       {props.arrowType === 'left' ? <ArrowLeft /> : <ArrowRight />}
     </ArrowWrapper>
   );

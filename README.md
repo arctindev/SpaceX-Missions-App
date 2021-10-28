@@ -31,9 +31,12 @@ TO-DO List:
     Posible solutions:
     - i could create the router and after clicking the arrow i could fetch single mission data. It means every time user navigates to another mission, data will be fetched.
     - i could create redux store, and by using RTK query the data will be fetched only 1 time, for example for 5 missions, then the data will be stored in redux store and user could check mission data even if his internet connetion has dropped. Maybe after navigating for 5th mission rtk query will fetch another 5 missions, not sure yet.
-15. Refactoring image resizing for ShipCard.
-16. Adding sort filter for query to get last 5 missions.
+15. Refactoring image resizing for ShipCard. (Done)
+16. Adding sort filter for query to get last 5 missions. (Done)
 17. Checking the website on another browsers than firefox.
-18. Creating error catching for api request.
-19. Writing some unit and integration tests by using testing-library.
-20. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page / or try to improve gradient background by using css or svg.
+18. Checking SEO, accesibility, screen readers features for website.
+19. Creating loading component for better UX experience
+20. Creating error catching for api request.
+21. Writing some unit and integration tests by using testing-library.
+22. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page / or try to improve gradient background by using css or svg.
+23. Adding good looking animation for mission change, or develop simple slider.

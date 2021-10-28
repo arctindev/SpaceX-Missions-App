@@ -11,25 +11,25 @@ export const MissionProvider = ({ children }) => {
   const [missions, setMissions] = useState([]);
   const [currentMissionData, setCurrentMissionData] = useState();
   const [currentMission, setCurrentMission] = useState(0);
-  const [blockPast,setBlockPast] = useState(true);
-  const [blockNext,setBlockNext] = useState(false);
+  const [blockPast, setBlockPast] = useState(true);
+  const [blockNext, setBlockNext] = useState(false);
 
   const nextMission = () => {
-    if(currentMission === missions.length -2){
+    if (currentMission === missions.length - 2) {
       setBlockNext(true);
     }
-    setCurrentMissionData(missions[currentMission+1]);
-    setCurrentMission(currentMission +1);
+    setCurrentMissionData(missions[currentMission + 1]);
+    setCurrentMission(currentMission + 1);
     setBlockPast(false);
-  }
+  };
   const pastMission = () => {
-    if(currentMission === 1){
+    if (currentMission === 1) {
       setBlockPast(true);
     }
-    setCurrentMissionData(missions[currentMission-1]);
-    setCurrentMission(currentMission -1);
+    setCurrentMissionData(missions[currentMission - 1]);
+    setCurrentMission(currentMission - 1);
     setBlockNext(false);
-}
+  };
   useEffect(() => {
     axios
       .post(queryLink, {
@@ -45,7 +45,16 @@ export const MissionProvider = ({ children }) => {
   }, []);
 
   return (
-    <MissionContext.Provider value={{ currentMissionData, nextMission, pastMission, currentMission, blockPast, blockNext }}>
+    <MissionContext.Provider
+      value={{
+        currentMissionData,
+        nextMission,
+        pastMission,
+        currentMission,
+        blockPast,
+        blockNext,
+      }}
+    >
       {children}
     </MissionContext.Provider>
   );
