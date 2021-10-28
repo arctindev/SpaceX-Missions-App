@@ -1,4 +1,4 @@
-const query = `
+export const query = `
 {
     launchesPast(limit: 5) {
       mission_name
@@ -30,4 +30,4 @@ const query = `
   }
 `;
 
-const queryLink = 'https://api.spacex.land/graphql/';
+export const queryLink = 'https://api.spacex.land/graphql/';

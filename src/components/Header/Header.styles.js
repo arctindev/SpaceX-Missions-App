@@ -42,4 +42,3 @@ export const Navigation = styled.nav`
     }
   }
 `;
-

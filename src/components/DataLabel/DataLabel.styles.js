@@ -3,6 +3,7 @@ import { getMobileMarginValue, getDesktopMarginValue } from './DataLabelUtils';
 
 // Props: Type
 export const DataLabelWrapper = styled.div`
+  position: relative;
   width: 100%;
   max-width: 520px;
   margin: auto;

@@ -26,7 +26,7 @@ TO-DO List:
     - Reminder for changing logo size on desktop.
 11. Checking how website looks on higher resolutions. (4k) (Done)
 12. Creating basic tablet view. (Done)
-13. Creating api request by using axios or RTQ query.
+13. Creating api request by using axios or RTQ query. (Done)
 14. Creating change mission feature.
     Posible solutions:
     - i could create the router and after clicking the arrow i could fetch single mission data. It means every time user navigates to another mission, data will be fetched.

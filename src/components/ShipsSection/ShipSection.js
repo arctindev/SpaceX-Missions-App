@@ -3,9 +3,8 @@ import { ShipSectionWrapper } from './ShipSection.styles';
 import { ShipCardList } from './ShipSection.styles';
 import { ShipCard } from '../ShipCard/ShipCard';
 import { DataLabel } from '../DataLabel/DataLabel';
-import { data } from '../../mocks/data';
 
-const ShipSection = () => {
+const ShipSection = ({missionData}) => {
   return (
     <ShipSectionWrapper>
       <DataLabel
@@ -14,7 +13,7 @@ const ShipSection = () => {
         type="rescue_ships_label"
       />
       <ShipCardList>
-        {data[0].ships.map((shipData) => (
+        {missionData.ships.map((shipData) => (
           <ShipCard key={shipData.id} shipData={shipData} />
         ))}
       </ShipCardList>
