@@ -22,7 +22,10 @@ const query = `
         name
         home_port
         image
+        weight_kg
+        id
       }
+      id
     }
   }
 `;

@@ -12,15 +12,21 @@ export const DataLabel = ({
   dataTextIsBig,
   type,
   hasRecoveredComponent,
-  isWithoutData,
-  headingIsBigger,
+  isHeadingBigger,
 }) => {
   return (
     <DataLabelWrapper type={type}>
-      <DataLabelHeading>{headingText}</DataLabelHeading>
-      <DataLabelText dataTextIsBig={dataTextIsBig}>{data}
-      {hasRecoveredComponent && <RecoveredComponent isRecovered={hasRecoveredComponent.data}/>}
-      </DataLabelText>
+      <DataLabelHeading isHeadingBigger={isHeadingBigger}>
+        {headingText}
+      </DataLabelHeading>
+      {data && (
+        <DataLabelText dataTextIsBig={dataTextIsBig}>
+          {data}
+          {hasRecoveredComponent && (
+            <RecoveredComponent isRecovered={hasRecoveredComponent.data} />
+          )}
+        </DataLabelText>
+      )}
     </DataLabelWrapper>
   );
 };

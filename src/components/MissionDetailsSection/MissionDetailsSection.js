@@ -14,7 +14,9 @@ const MissionDetailsSection = () => {
         type="mission_label"
       />
       <DataLabel
-        hasRecoveredComponent={{data: data[0].rocket.first_stage.cores[0].land_success}}
+        hasRecoveredComponent={{
+          data: data[0].rocket.first_stage.cores[0].land_success,
+        }}
         headingText="ROCKET"
         data={data[0].rocket.rocket_name}
         type="rocket_name_label"
@@ -22,7 +24,7 @@ const MissionDetailsSection = () => {
       <Button buttonText="LEARN MORE" />
       <DataLabel
         headingText="LAUNCH DATE"
-        data={data[0].launch_date_local.replace('T',' ')}
+        data={data[0].launch_date_local.replace('T', ' ')}
         type="launch_date"
       />
       <DataLabel

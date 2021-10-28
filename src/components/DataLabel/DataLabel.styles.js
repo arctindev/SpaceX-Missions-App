@@ -14,6 +14,9 @@ const getMarginValue = (type) => {
     case 'launch_site':
       return '20px';
 
+    case 'rescue_ships_label':
+      return '17px';
+
     default:
       throw console.error('Type prop should have a string value');
   }
@@ -21,14 +24,21 @@ const getMarginValue = (type) => {
 
 // Props: Type
 export const DataLabelWrapper = styled.div`
+  width: 100%;
+  max-width: 520px;
+  text-align: left;
+  margin: auto;
   margin-bottom: ${({ type }) => getMarginValue(type)};
 `;
 
+// Props: isHeadingBigger
 export const DataLabelHeading = styled.h3`
   font-weight: 500;
-  font-size: ${({ theme }) => theme.fontSize.s};
+  font-size: ${({ isHeadingBigger, theme }) =>
+    isHeadingBigger ? theme.fontSize.m : theme.fontSize.s};
   color: ${({ theme }) => theme.fontColor.grey};
-  line-height: 16.41px;
+  line-height: ${({ isHeadingBigger }) =>
+    isHeadingBigger ? '19px' : '16.41px'};
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 7px;
