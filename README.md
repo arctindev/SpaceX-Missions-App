@@ -27,7 +27,7 @@ TO-DO List:
 11. Checking how website looks on higher resolutions. (4k) (Done)
 12. Creating basic tablet view. (Done)
 13. Creating api request by using axios or RTQ query. (Done)
-14. Creating change mission feature.
+14. Creating change mission feature. (Done)
     Posible solutions:
     - i could create the router and after clicking the arrow i could fetch single mission data. It means every time user navigates to another mission, data will be fetched.
     - i could create redux store, and by using RTK query the data will be fetched only 1 time, for example for 5 missions, then the data will be stored in redux store and user could check mission data even if his internet connetion has dropped. Maybe after navigating for 5th mission rtk query will fetch another 5 missions, not sure yet.

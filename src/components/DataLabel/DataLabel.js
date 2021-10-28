@@ -39,7 +39,7 @@ export const DataLabel = ({
           {hasRecoveredComponent && (
             <RecoveredComponent isRecovered={hasRecoveredComponent.data} />
           )}
-          {showDetails && <ShowMoreComponent data={longerData}/>}
+          {showDetails && <ShowMoreComponent data={longerData} />}
         </DataLabelText>
       )}
     </DataLabelWrapper>

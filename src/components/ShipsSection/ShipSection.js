@@ -4,7 +4,7 @@ import { ShipCardList } from './ShipSection.styles';
 import { ShipCard } from '../ShipCard/ShipCard';
 import { DataLabel } from '../DataLabel/DataLabel';
 
-const ShipSection = ({missionData}) => {
+const ShipSection = ({ missionData }) => {
   return (
     <ShipSectionWrapper>
       <DataLabel

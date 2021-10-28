@@ -11,7 +11,7 @@ export const StyledSpan = styled.span`
   bottom: -30px;
   right: 55px;
   border-radius: 4px;
-  
+
   @media only screen and (min-width: 768px) {
     white-space: nowrap;
   }

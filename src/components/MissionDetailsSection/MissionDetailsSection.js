@@ -6,7 +6,7 @@ import {
 import { DataLabel } from '../DataLabel/DataLabel';
 import { Button } from '../Button/Button';
 
-const MissionDetailsSection = ({missionData = {}}) => {
+const MissionDetailsSection = ({ missionData = {} }) => {
   return (
     <MissionDetailsWrapper>
       <FlexColumnWrapper>

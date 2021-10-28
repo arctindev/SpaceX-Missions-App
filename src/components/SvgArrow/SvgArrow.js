@@ -3,10 +3,10 @@ import { ArrowWrapper } from './SvgArrow.styles';
 import { ReactComponent as ArrowLeft } from '../../assets/leftArrow.svg';
 import { ReactComponent as ArrowRight } from '../../assets/rightArrow.svg';
 
-export const SvgArrow = ({ arrowType = 'left', isActive = true }) => {
+export const SvgArrow = (props) => {
   return (
-    <ArrowWrapper isActive={isActive} arrowType={arrowType}>
-      {arrowType === 'left' ? <ArrowLeft /> : <ArrowRight />}
+    <ArrowWrapper {...props} isActive={props.isActive} arrowType={props.arrowType}>
+      {props.arrowType === 'left' ? <ArrowLeft /> : <ArrowRight />}
     </ArrowWrapper>
   );
 };
