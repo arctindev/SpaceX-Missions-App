@@ -4,12 +4,14 @@ import { MissionProvider } from './MissionProvider';
 import GlobalStyle from '../styles/globalStyle';
 import { theme } from '../styles/themes';
 
-const AppProviders = ({ children }) => {
+const AppProviders = ({ children }: any) => {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <MissionProvider>{children}</MissionProvider>
-    </ThemeProvider>
+    <>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <MissionProvider>{children}</MissionProvider>
+      </ThemeProvider>
+    </>
   );
 };
 

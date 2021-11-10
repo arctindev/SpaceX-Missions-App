@@ -2,7 +2,7 @@ import React from 'react';
 import { TemplateWrapper } from './template.styles';
 import { Header } from '../components/Header/Header';
 
-const Template = ({ children }) => {
+const Template = ({ children }: any) => {
   return (
     <TemplateWrapper>
       <Header />

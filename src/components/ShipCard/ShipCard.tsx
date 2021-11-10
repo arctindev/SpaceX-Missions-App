@@ -9,7 +9,7 @@ import {
   DataText,
 } from './ShipCard.styles';
 
-export const ShipCard = ({ shipData }) => {
+export const ShipCard = ({ shipData }: any) => {
   return (
     <ShipCardWrapper>
       <ShipImage

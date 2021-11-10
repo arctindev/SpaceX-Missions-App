@@ -1,4 +1,4 @@
-export const getMobileMarginValue = (type) => {
+export const getMobileMarginValue = (type: string) => {
   switch (type) {
     case 'mission_label':
       return '20px';
@@ -20,7 +20,7 @@ export const getMobileMarginValue = (type) => {
   }
 };
 
-export const getDesktopMarginValue = (type) => {
+export const getDesktopMarginValue = (type: string) => {
   switch (type) {
     case 'mission_label':
       return '23px';

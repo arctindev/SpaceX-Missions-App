@@ -6,7 +6,7 @@ import {
 import { DataLabel } from '../DataLabel/DataLabel';
 import { Button } from '../Button/Button';
 
-const MissionDetailsSection = ({ missionData = {} }) => {
+const MissionDetailsSection = ({ missionData = {} }: any) => {
   return (
     <MissionDetailsWrapper>
       <FlexColumnWrapper>
@@ -25,6 +25,7 @@ const MissionDetailsSection = ({ missionData = {} }) => {
           type="rocket_name_label"
         />
         <Button
+          isLink
           articleLink={
             !missionData.links.article_link
               ? missionData.links.video_link

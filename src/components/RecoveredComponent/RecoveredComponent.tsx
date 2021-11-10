@@ -1,7 +1,13 @@
 import React from 'react';
 import { StyledRecoveredComponent } from './RecoveredComponent.styles';
 
-export const RecoveredComponent = ({ isRecovered }) => (
+interface RecoveredComponentProps {
+  isRecovered: boolean;
+}
+
+export const RecoveredComponent = ({
+  isRecovered,
+}: RecoveredComponentProps) => (
   <StyledRecoveredComponent isRecovered={isRecovered}>
     {isRecovered ? 'RECOVERED' : 'UNRECOVERED'}
   </StyledRecoveredComponent>

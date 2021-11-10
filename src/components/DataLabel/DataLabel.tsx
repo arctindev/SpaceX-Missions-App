@@ -8,6 +8,18 @@ import {
 import { RecoveredComponent } from '../RecoveredComponent/RecoveredComponent';
 import { ShowMoreComponent } from '../ShowMoreComponent/ShowMoreComponent';
 
+interface DataLabelProps {
+  headingText?: string;
+  data?: string;
+  dataTextIsBig?: boolean;
+  type?: string;
+  hasRecoveredComponent?: {
+    data: boolean;
+  };
+  isHeadingBigger?: boolean;
+  longerData?: boolean;
+}
+
 export const DataLabel = ({
   headingText,
   data,
@@ -16,14 +28,19 @@ export const DataLabel = ({
   hasRecoveredComponent,
   isHeadingBigger,
   longerData,
-}) => {
+}: DataLabelProps) => {
   const [showDetails, setShowDetails] = useState(false);
-  const handleMouseEnter = () => {
-    setShowDetails(true);
-  };
-  const handleMouseLeave = () => {
-    setShowDetails(false);
-  };
+
+  const handleMouseEnter: React.MouseEventHandler<HTMLParagraphElement> =
+    (): void => {
+      setShowDetails(true);
+    };
+
+  const handleMouseLeave: React.MouseEventHandler<HTMLParagraphElement> =
+    (): void => {
+      setShowDetails(false);
+    };
+
   return (
     <DataLabelWrapper type={type}>
       <DataLabelHeading isHeadingBigger={isHeadingBigger}>
@@ -31,8 +48,8 @@ export const DataLabel = ({
       </DataLabelHeading>
       {data && (
         <DataLabelText
-          onMouseEnter={type === 'launch_site' ? handleMouseEnter : null}
-          onMouseLeave={type === 'launch_site' ? handleMouseLeave : null}
+          onMouseEnter={type === 'launch_site' ? handleMouseEnter : undefined}
+          onMouseLeave={type === 'launch_site' ? handleMouseLeave : undefined}
           dataTextIsBig={dataTextIsBig}
         >
           {data}
