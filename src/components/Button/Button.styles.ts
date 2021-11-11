@@ -17,8 +17,16 @@ export const StyledLink = styled.a<StyledLinkProps>`
   width: 100%;
   text-decoration: none;
   text-align: center;
+
+  &:focus {
+    outline-offset: 2px;
+    outline: 5px auto blue;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+
   &:hover {
     background-color: ${({ theme }) => theme.componentColor.primary + '15'};
+    outline: none;
   }
 
   &:active {

@@ -34,6 +34,7 @@ export const ShipImage = styled.img`
   object-fit: cover;
   object-position: 50% 65%;
   border-radius: ${({ theme }) => theme.borderRadius.topCornersM};
+  pointer-events: none;
 `;
 
 export const ShipNameHeading = styled.h2`

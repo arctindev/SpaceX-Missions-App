@@ -16,10 +16,11 @@ interface ShipCardProps {
 }
 
 export const ShipCard = ({ shipData }: ShipCardProps) => {
+  const imageLink = imgurResizeImage(shipData.image);
   return (
     <ShipCardWrapper>
       <ShipImage
-        src={imgurResizeImage(shipData.image)}
+        src={imageLink}
         alt={`This is a picture of ship named "${shipData.name}"`}
       ></ShipImage>
       <ShipDetailsWrapper>

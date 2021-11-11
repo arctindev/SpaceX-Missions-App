@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import backgroundImage from '../assets/background.jpg';
 
 export const TemplateWrapper = styled.div`
   width: 100%;
