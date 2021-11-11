@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const StyledLink = styled.a`
+interface StyledLinkProps {
+  alt : string,
+}
+
+export const StyledLink = styled.a<StyledLinkProps>`
   padding: 19px 0;
   background: none;
   color: ${({ theme }) => theme.fontColor.primary};

@@ -46,6 +46,7 @@ interface DataLabelTextProps {
 }
 
 export const DataLabelText = styled.p<DataLabelTextProps>`
+  display: inline;
   font-weight: ${({ dataTextIsBig, theme }) => (dataTextIsBig ? theme.fontWeight.bold : theme.fontWeight.default)};
   font-size: ${({ dataTextIsBig, theme }) =>
     dataTextIsBig ? theme.fontSize.xl : theme.fontSize.m};

@@ -15,8 +15,10 @@ export const SvgArrow = (props: SvgArrowProps) => {
       {...props}
       isActive={props.isActive}
       arrowType={props.arrowType}
+      disabled={!props.isActive}
+      aria-label={(props.arrowType === 'left') ? 'Previous mission' : 'Next mission'}
     >
-      {props.arrowType === 'left' ? <ArrowLeft /> : <ArrowRight />}
+      {props.arrowType === 'left' ? <ArrowLeft title="Previous mission button"/> : <ArrowRight title="Next mission button"/>}
     </ArrowWrapper>
   );
 };

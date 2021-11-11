@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const PageContentWrapper = styled.div`
+export const PageContentWrapper = styled.main`
   width: 100%;
   padding-bottom: 65px;
 
