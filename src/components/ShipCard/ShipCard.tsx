@@ -8,8 +8,13 @@ import {
   DataHeading,
   DataText,
 } from './ShipCard.styles';
+import { shipModel } from '../../api/responseModel';
 
-export const ShipCard = ({ shipData }: any) => {
+interface ShipCardProps {
+  shipData: shipModel;
+}
+
+export const ShipCard = ({ shipData }: ShipCardProps) => {
   return (
     <ShipCardWrapper>
       <ShipImage

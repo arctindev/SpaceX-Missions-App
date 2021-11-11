@@ -5,8 +5,13 @@ import {
 } from './MissionDetailsSection.styles';
 import { DataLabel } from '../DataLabel/DataLabel';
 import { Button } from '../Button/Button';
+import { MissionDataModel } from '../../api/responseModel';
 
-const MissionDetailsSection = ({ missionData = {} }: any) => {
+interface MissionDetailsSectionProps {
+  missionData: MissionDataModel;
+}
+
+const MissionDetailsSection = ({ missionData }: MissionDetailsSectionProps) => {
   return (
     <MissionDetailsWrapper>
       <FlexColumnWrapper>

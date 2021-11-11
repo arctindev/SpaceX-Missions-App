@@ -33,13 +33,14 @@ TO-DO List:
     - i could create redux store, and by using RTK query the data will be fetched only 1 time, for example for 5 missions, then the data will be stored in redux store and user could check mission data even if his internet connetion has dropped. Maybe after navigating for 5th mission rtk query will fetch another 5 missions, not sure yet.
 15. Refactoring image resizing for ShipCard. (Done)
 16. Adding sort filter for query to get last 5 missions. (Done)
-17. Converting code to Typescript, can make "any" type workarounds, the goal is working code even  without type checking. (done)
-18. Double check every file in search "any" type workarounds.
-19. Write known issues and bugs in readme or in github issues for repo.
-20. Checking the website on another browsers than firefox.
-21. Checking SEO, accesibility, screen readers features for website.
-22. Creating loading component for better UX experience
-23. Creating error catching for api request.
-24. Writing some unit and integration tests by using testing-library.
-25. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page / or try to improve gradient background by using css or svg.
-26. Adding good looking animation for mission change, or develop simple slider.
+17. Converting code to Typescript, can make "any" type workarounds, the goal is working code even without type checking. (done)
+18. Double check every file in search for "any" type workarounds. (done)
+19. Refactoring theme file for better reusability in future. (Adding MaterialUI-ish primary, secondary colors , adding theme values for border radius, margins and paddings)
+20. Write known issues and bugs in readme or in github issues in gh repo.
+21. Checking the website on another browsers than firefox.
+22. Checking SEO, accesibility, screen readers features for website.
+23. Creating loading component for better UX experience
+24. Creating error catching for api request.
+25. Writing some unit and integration tests by using testing-library.
+26. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page / or try to improve gradient background by using css or svg.
+27. Adding good looking animation for mission change, or develop simple slider.

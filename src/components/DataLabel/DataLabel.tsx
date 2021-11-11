@@ -9,15 +9,17 @@ import { RecoveredComponent } from '../RecoveredComponent/RecoveredComponent';
 import { ShowMoreComponent } from '../ShowMoreComponent/ShowMoreComponent';
 
 interface DataLabelProps {
-  headingText?: string;
-  data?: string;
+  headingText: string;
+  type: string;
   dataTextIsBig?: boolean;
-  type?: string;
+  data?: string;
   hasRecoveredComponent?: {
     data: boolean;
   };
   isHeadingBigger?: boolean;
-  longerData?: boolean;
+  longerData?: string;
+  onMouseEnter?: React.MouseEventHandler<HTMLParagraphElement> | undefined;
+  onMouseLeave?: React.MouseEventHandler<HTMLParagraphElement> | undefined;
 }
 
 export const DataLabel = ({

@@ -2,7 +2,11 @@ import React from 'react';
 import { TemplateWrapper } from './template.styles';
 import { Header } from '../components/Header/Header';
 
-const Template = ({ children }: any) => {
+interface TemplateProps {
+  children: React.ReactNode;
+}
+
+const Template = ({ children }: TemplateProps) => {
   return (
     <TemplateWrapper>
       <Header />
