@@ -5,7 +5,7 @@ export const HeaderWrapper = styled.header`
   max-width: 1140px;
   margin: auto;
   grid-row: 1/1;
-  border-bottom: 1px solid ${({ theme }) => theme.componentColor.grey};
+  border-bottom: 1px solid ${({ theme }) => theme.componentColor.secondary};
 
   @media only screen and (min-width: 768px) {
     max-width: 1200px;

@@ -1,20 +1,32 @@
+const colors = {
+  white: '#FFFFFF',
+  darkerWhite: '#F4F6FA',
+  black: '#000000',
+  lighterBlack: "#323237",
+  gray: '#868686',
+  darkGray: '#5C5C5D',
+  lightGray: '#E8E8E8',
+  red: '#BE4E35',
+  green: '#6FB46E',
+}
+
 export const theme = {
   backgroundColor: {
-    linearGrey: '#323237',
-    linearBlack: '#000000',
+    linearPrimary: colors.lighterBlack,
+    linearSecondary: colors.black,
   },
   componentColor: {
-    red: '#BE4E35',
-    green: '#6FB46E',
-    white: '#FFFFFF',
-    darkerWhite: '#F4F6FA',
-    grey: '#5C5C5D',
-    lightGrey: '#E8E8E8',
+    primary: colors.white, //white
+    secondary: colors.darkGray, // grey
+    darkerPrimary: colors.darkerWhite, //darkerWhite
+    darkerSecondary: colors.lightGray, //lightGrey
+    error: colors.red, // red
+    success: colors.green, //green
   },
   fontColor: {
-    black: '#000000',
-    grey: '#868686',
-    white: '#FFFFFF',
+    primary: colors.white,
+    secondary: colors.gray,
+    invertedPrimary: colors.black,
   },
   fontSize: {
     xxl: '42px',

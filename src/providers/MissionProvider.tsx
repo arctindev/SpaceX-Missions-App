@@ -12,10 +12,6 @@ interface MissionContextProps {
   blockNext: boolean;
 }
 
-interface MissionProviderProps {
-  children: React.ReactNode;
-}
-
 export const MissionContext = React.createContext<MissionContextProps>({
   currentMission: 0,
   currentMissionData: undefined,
@@ -24,6 +20,10 @@ export const MissionContext = React.createContext<MissionContextProps>({
   blockPast: true,
   blockNext: false,
 });
+
+interface MissionProviderProps {
+  children: React.ReactNode;
+}
 
 export const MissionProvider = ({ children }: MissionProviderProps) => {
   const [missions, setMissions] = useState([]);

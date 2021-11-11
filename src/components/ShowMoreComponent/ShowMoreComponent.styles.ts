@@ -6,8 +6,8 @@ export const StyledSpan = styled.span`
   font-weight: 500;
   font-size: ${({ theme }) => theme.fontSize.s};
   line-height: 16px;
-  background: ${({ theme }) => theme.componentColor.white};
-  color: ${({ theme }) => theme.fontColor.black};
+  background: ${({ theme }) => theme.componentColor.primary};
+  color: ${({ theme }) => theme.fontColor.invertedPrimary};
   bottom: -30px;
   right: 55px;
   border-radius: 4px;

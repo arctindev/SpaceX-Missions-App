@@ -18,8 +18,8 @@ export const ArrowWrapper = styled.button<SvgArrowProps>`
     & > path {
       fill: ${({ theme, isActive }) =>
         isActive
-          ? theme.componentColor.darkerWhite
-          : theme.componentColor.grey};
+          ? theme.componentColor.darkerPrimary
+          : theme.componentColor.secondary};
     }
   }
   @media only screen and (min-width: 768px) {

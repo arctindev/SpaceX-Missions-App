@@ -4,7 +4,7 @@ export const ShipCardWrapper = styled.div`
   width: 100%;
   max-width: 520px;
   min-height: 340px;
-  background-color: ${({ theme }) => theme.componentColor.white};
+  background-color: ${({ theme }) => theme.componentColor.primary};
   border-radius: 20px;
   margin-bottom: 20px;
   @media only screen and (min-width: 768px) {
@@ -41,9 +41,9 @@ export const ShipNameHeading = styled.h2`
   font-weight: 700;
   line-height: 24px;
   font-size: ${({ theme }) => theme.fontSize.l};
-  color: ${({ theme }) => theme.fontColor.black};
+  color: ${({ theme }) => theme.fontColor.invertedPrimary};
   padding-bottom: 16px;
-  border-bottom: 1px solid ${({ theme }) => theme.componentColor.lightGrey};
+  border-bottom: 1px solid ${({ theme }) => theme.componentColor.darkerSecondary};
   margin-bottom: 14px;
 `;
 
@@ -58,7 +58,7 @@ export const DataLabelWrapper = styled.div`
 export const DataHeading = styled.h3`
   min-width: 82px;
   font-size: ${({ theme }) => theme.fontSize.xs};
-  color: ${({ theme }) => theme.fontColor.grey};
+  color: ${({ theme }) => theme.fontColor.secondary};
   line-height: 24px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -68,7 +68,7 @@ export const DataHeading = styled.h3`
 export const DataText = styled.p`
   margin-left: 38px;
   font-size: ${({ theme }) => theme.fontSize.s};
-  color: ${({ theme }) => theme.fontColor.black};
+  color: ${({ theme }) => theme.fontColor.invertedPrimary};
   line-height: 24px;
   font-weight: 700;
 `;

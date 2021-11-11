@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import { getMobileMarginValue, getDesktopMarginValue } from './DataLabelUtils';
 
@@ -28,7 +27,7 @@ export const DataLabelHeading = styled.h3<DataLabelHeadingProps>`
   font-weight: 500;
   font-size: ${({ isHeadingBigger, theme }) =>
     isHeadingBigger ? theme.fontSize.m : theme.fontSize.s};
-  color: ${({ theme }) => theme.fontColor.grey};
+  color: ${({ theme }) => theme.fontColor.secondary};
   line-height: ${({ isHeadingBigger }) =>
     isHeadingBigger ? '19px' : '16.41px'};
   letter-spacing: 0.1em;
@@ -52,7 +51,7 @@ export const DataLabelText = styled.p<DataLabelTextProps>`
     dataTextIsBig ? theme.fontSize.xl : theme.fontSize.m};
   line-height: ${({ dataTextIsBig }) =>
     dataTextIsBig ? '40px' : '18.75px'};
-  color: ${({ theme }) => theme.fontColor.white};
+  color: ${({ theme }) => theme.fontColor.primary};
   margin-top: ${({ dataTextIsBig }) => (dataTextIsBig ? '8px' : '0px')};
 
   @media only screen and (min-width: 768px) {

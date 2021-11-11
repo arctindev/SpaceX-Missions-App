@@ -36,6 +36,13 @@ TO-DO List:
 17. Converting code to Typescript, can make "any" type workarounds, the goal is working code even without type checking. (done)
 18. Double check every file in search for "any" type workarounds. (done)
 19. Refactoring theme file for better reusability in future. (Adding MaterialUI-ish primary, secondary colors , adding theme values for border radius, margins and paddings)
+    - background colors (Done)
+    - font colors (Done)
+    - component colors (Done)
+    - margins
+    - paddings
+    - border radius
+    - font weight
 20. Write known issues and bugs in readme or in github issues in gh repo.
 21. Checking the website on another browsers than firefox.
 22. Checking SEO, accesibility, screen readers features for website.

@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const StyledLink = styled.a`
   padding: 19px 0;
   background: none;
-  color: ${({ theme }) => theme.fontColor.white};
-  border: 2px solid ${({ theme }) => theme.componentColor.white};
+  color: ${({ theme }) => theme.fontColor.primary};
+  border: 2px solid ${({ theme }) => theme.componentColor.primary};
   cursor: pointer;
   margin-bottom: 27px;
   line-height: 16.41px;
@@ -14,7 +14,7 @@ export const StyledLink = styled.a`
   text-decoration: none;
   text-align: center;
   &:hover {
-    background-color: ${({ theme }) => theme.componentColor.white + '15'};
+    background-color: ${({ theme }) => theme.componentColor.primary + '15'};
   }
 
   &:active {
@@ -30,8 +30,8 @@ export const StyledLink = styled.a`
 export const StyledButton = styled.button`
   padding: 19px 0;
   background: none;
-  color: ${({ theme }) => theme.fontColor.white};
-  border: 2px solid ${({ theme }) => theme.componentColor.white};
+  color: ${({ theme }) => theme.fontColor.primary};
+  border: 2px solid ${({ theme }) => theme.componentColor.primary};
   cursor: pointer;
   margin-bottom: 27px;
   line-height: 16.41px;
@@ -41,7 +41,7 @@ export const StyledButton = styled.button`
   text-decoration: none;
   text-align: center;
   &:hover {
-    background-color: ${({ theme }) => theme.componentColor.white + '15'};
+    background-color: ${({ theme }) => theme.componentColor.primary + '15'};
   }
 
   &:active {
