@@ -3,7 +3,13 @@ import { ArrowWrapper } from './SvgArrow.styles';
 import { ReactComponent as ArrowLeft } from '../../assets/leftArrow.svg';
 import { ReactComponent as ArrowRight } from '../../assets/rightArrow.svg';
 
-export const SvgArrow = (props: any) => {
+interface SvgArrowProps {
+  isActive: boolean;
+  arrowType: string;
+  onClick: () => void;
+}
+
+export const SvgArrow = (props: SvgArrowProps) => {
   return (
     <ArrowWrapper
       {...props}

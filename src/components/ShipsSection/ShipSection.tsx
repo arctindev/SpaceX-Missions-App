@@ -3,8 +3,13 @@ import { ShipSectionWrapper } from './ShipSection.styles';
 import { ShipCardList } from './ShipSection.styles';
 import { ShipCard } from '../ShipCard/ShipCard';
 import { DataLabel } from '../DataLabel/DataLabel';
+import { MissionDataModel } from '../../api/responseModel';
 
-const ShipSection = ({ missionData }: any) => {
+interface ShipSectionProps {
+  missionData: MissionDataModel;
+}
+
+const ShipSection = ({ missionData }: ShipSectionProps) => {
   return (
     <ShipSectionWrapper>
       <DataLabel
@@ -13,7 +18,7 @@ const ShipSection = ({ missionData }: any) => {
         type="rescue_ships_label"
       />
       <ShipCardList>
-        {missionData.ships.map((shipData: any) => (
+        {missionData.ships.map((shipData) => (
           <ShipCard key={shipData.id} shipData={shipData} />
         ))}
       </ShipCardList>

@@ -1,6 +1,10 @@
 import React from 'react';
 import { StyledSpan } from './ShowMoreComponent.styles';
 
-export const ShowMoreComponent = ({ data }: any) => {
+interface ShowMoreComponentProps {
+  data: string | undefined;
+}
+
+export const ShowMoreComponent = ({ data }: ShowMoreComponentProps) => {
   return <StyledSpan>{data}</StyledSpan>;
 };

@@ -1,28 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import { query, queryLink } from '../api/query';
+import { MissionDataModel } from '../api/responseModel';
 import axios from 'axios';
 
-interface missionContextProps {
+interface MissionContextProps {
   currentMission: number;
-  currentMissionData: any;
-  nextMission?: any;
-  pastMission?: any;
-  blockPast?: any;
-  blockNext?: any;
+  currentMissionData: MissionDataModel | undefined;
+  nextMission: () => void;
+  pastMission: () => void;
+  blockPast: boolean;
+  blockNext: boolean;
 }
-export const MissionContext = React.createContext<missionContextProps>({
+
+interface MissionProviderProps {
+  children: React.ReactNode;
+}
+
+export const MissionContext = React.createContext<MissionContextProps>({
   currentMission: 0,
-  currentMissionData: '',
+  currentMissionData: undefined,
+  nextMission: () => {},
+  pastMission: () => {},
+  blockPast: true,
+  blockNext: false,
 });
 
-export const MissionProvider = ({ children }: any) => {
+export const MissionProvider = ({ children }: MissionProviderProps) => {
   const [missions, setMissions] = useState([]);
-  const [currentMissionData, setCurrentMissionData] = useState<any>();
-  const [currentMission, setCurrentMission] = useState<any>(0);
-  const [blockPast, setBlockPast] = useState<any>(true);
-  const [blockNext, setBlockNext] = useState<any>(false);
+  const [currentMissionData, setCurrentMissionData] = useState();
+  const [currentMission, setCurrentMission] = useState(0);
+  const [blockPast, setBlockPast] = useState(true);
+  const [blockNext, setBlockNext] = useState(false);
 
-  const nextMission = () => {
+  const nextMission = (): void => {
     if (currentMission === missions.length - 2) {
       setBlockNext(true);
     }
@@ -31,7 +41,7 @@ export const MissionProvider = ({ children }: any) => {
     setBlockPast(false);
   };
 
-  const pastMission = () => {
+  const pastMission = (): void => {
     if (currentMission === 1) {
       setBlockPast(true);
     }
