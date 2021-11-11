@@ -7,29 +7,29 @@ interface MissionContextProps {
   currentMission: number;
   currentMissionData: MissionDataModel | undefined;
   nextMission: () => void;
-  pastMission: () => void;
-  blockPast: boolean;
+  previousMission: () => void;
+  blockPrevious: boolean;
   blockNext: boolean;
-}
-
-interface MissionProviderProps {
-  children: React.ReactNode;
 }
 
 export const MissionContext = React.createContext<MissionContextProps>({
   currentMission: 0,
   currentMissionData: undefined,
   nextMission: () => {},
-  pastMission: () => {},
-  blockPast: true,
+  previousMission: () => {},
+  blockPrevious: true,
   blockNext: false,
 });
+
+interface MissionProviderProps {
+  children: React.ReactNode;
+}
 
 export const MissionProvider = ({ children }: MissionProviderProps) => {
   const [missions, setMissions] = useState([]);
   const [currentMissionData, setCurrentMissionData] = useState();
   const [currentMission, setCurrentMission] = useState(0);
-  const [blockPast, setBlockPast] = useState(true);
+  const [blockPrevious, setBlockPrevious] = useState(true);
   const [blockNext, setBlockNext] = useState(false);
 
   const nextMission = (): void => {
@@ -38,12 +38,12 @@ export const MissionProvider = ({ children }: MissionProviderProps) => {
     }
     setCurrentMissionData(missions[currentMission + 1]);
     setCurrentMission(currentMission + 1);
-    setBlockPast(false);
+    setBlockPrevious(false);
   };
 
-  const pastMission = (): void => {
+  const previousMission = (): void => {
     if (currentMission === 1) {
-      setBlockPast(true);
+      setBlockPrevious(true);
     }
     setCurrentMissionData(missions[currentMission - 1]);
     setCurrentMission(currentMission - 1);
@@ -70,8 +70,8 @@ export const MissionProvider = ({ children }: MissionProviderProps) => {
         currentMissionData,
         currentMission,
         nextMission,
-        pastMission,
-        blockPast,
+        previousMission,
+        blockPrevious,
         blockNext,
       }}
     >

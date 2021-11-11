@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const MissionDetailsWrapper = styled.div`
-  color: white;
+  color: ${({ theme }) => theme.fontColor.primary};
   display: flex;
   flex-direction: column;
   padding: 17px 15px 0px 15px;
-  border-bottom: 1px solid ${({ theme }) => theme.componentColor.grey};
+  border-bottom: 1px solid ${({ theme }) => theme.componentColor.secondary};
   max-width: 1140px;
   margin: auto;
 
@@ -37,7 +37,7 @@ export const FlexColumnWrapper = styled.div`
   @media only screen and (min-width: 768px) {
     width: 50%;
     max-width: 425px;
-    margin: 0;
+    margin: 0; // reseting margin auto
     &:nth-of-type(2n) {
       text-align: right;
     }

@@ -15,10 +15,15 @@ interface ShipCardProps {
 }
 
 export const ShipCard = ({ shipData }: ShipCardProps) => {
+  const ScalingImageLink = () : string => {
+    let temp = shipData.image.split('.');
+    temp[temp.length -2] += 'l';
+    return temp.join('.');
+  }
   return (
     <ShipCardWrapper>
       <ShipImage
-        src={shipData.image}
+        src={ScalingImageLink()}
         alt={`This is a picture of ship named "${shipData.name}"`}
       ></ShipImage>
       <ShipDetailsWrapper>

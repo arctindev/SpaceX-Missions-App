@@ -6,12 +6,12 @@ import { Navigation } from './Header.styles';
 import { MissionContext } from '../../providers/MissionProvider';
 
 export const Header = () => {
-  const { nextMission, pastMission, blockPast, blockNext } =
+  const { nextMission, previousMission, blockPrevious, blockNext } =
     useContext(MissionContext);
 
-  const handlePastClick = () => {
-    if (!blockPast) {
-      pastMission();
+  const handlePreviousClick = () => {
+    if (!blockPrevious) {
+      previousMission();
     }
   };
   const handleNextClick = () => {
@@ -23,11 +23,11 @@ export const Header = () => {
     <HeaderWrapper>
       <Navigation>
         <SvgArrow
-          onClick={handlePastClick}
-          isActive={!blockPast}
+          onClick={handlePreviousClick}
+          isActive={!blockPrevious}
           arrowType="left"
         />
-        <LogoSVG />
+        <LogoSVG title="Website Logo"/>
         <SvgArrow
           onClick={handleNextClick}
           isActive={!blockNext}
