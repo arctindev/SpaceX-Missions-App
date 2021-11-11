@@ -37,7 +37,7 @@ export const FlexColumnWrapper = styled.div`
   @media only screen and (min-width: 768px) {
     width: 50%;
     max-width: 425px;
-    margin: 0;
+    margin: 0; // reseting margin auto
     &:nth-of-type(2n) {
       text-align: right;
     }

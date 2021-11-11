@@ -9,7 +9,7 @@ export const StyledLink = styled.a`
   margin-bottom: 27px;
   line-height: 16.41px;
   font-size: ${({ theme }) => theme.fontSize.s};
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.fontWeight.default};
   width: 100%;
   text-decoration: none;
   text-align: center;
@@ -36,7 +36,7 @@ export const StyledButton = styled.button`
   margin-bottom: 27px;
   line-height: 16.41px;
   font-size: ${({ theme }) => theme.fontSize.s};
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.fontWeight.default};
   width: 100%;
   text-decoration: none;
   text-align: center;

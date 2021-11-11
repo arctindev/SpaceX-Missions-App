@@ -14,7 +14,7 @@ export const DataLabelWrapper = styled.div<DataLabelWrapperProps>`
   margin-bottom: ${({ type }) => getMobileMarginValue(type)};
 
   @media only screen and (min-width: 768px) {
-    margin: 0;
+    margin: 0; // reseting margin auto
     margin-bottom: ${({ type }) => getDesktopMarginValue(type)};
   }
 `;
@@ -24,7 +24,7 @@ interface DataLabelHeadingProps {
 }
 
 export const DataLabelHeading = styled.h3<DataLabelHeadingProps>`
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.fontWeight.default};
   font-size: ${({ isHeadingBigger, theme }) =>
     isHeadingBigger ? theme.fontSize.m : theme.fontSize.s};
   color: ${({ theme }) => theme.fontColor.secondary};
@@ -46,7 +46,7 @@ interface DataLabelTextProps {
 }
 
 export const DataLabelText = styled.p<DataLabelTextProps>`
-  font-weight: ${({ dataTextIsBig }) => (dataTextIsBig ? '700' : '500')};
+  font-weight: ${({ dataTextIsBig, theme }) => (dataTextIsBig ? theme.fontWeight.bold : theme.fontWeight.default)};
   font-size: ${({ dataTextIsBig, theme }) =>
     dataTextIsBig ? theme.fontSize.xl : theme.fontSize.m};
   line-height: ${({ dataTextIsBig }) =>

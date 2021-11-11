@@ -5,13 +5,12 @@ export const ShipCardWrapper = styled.div`
   max-width: 520px;
   min-height: 340px;
   background-color: ${({ theme }) => theme.componentColor.primary};
-  border-radius: 20px;
+  border-radius: ${({ theme }) => theme.borderRadius.allCornersM};
   margin-bottom: 20px;
   @media only screen and (min-width: 768px) {
     max-width: 520px;
     width: calc(50% - 10px);
     margin-right: 20px;
-    margin-bottom: 20px;
     &:nth-of-type(2n) {
       margin-right: 0px;
     }
@@ -34,11 +33,11 @@ export const ShipImage = styled.img`
   height: 200px;
   object-fit: cover;
   object-position: 50% 65%;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: ${({ theme }) => theme.borderRadius.topCornersM};
 `;
 
 export const ShipNameHeading = styled.h2`
-  font-weight: 700;
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: 24px;
   font-size: ${({ theme }) => theme.fontSize.l};
   color: ${({ theme }) => theme.fontColor.invertedPrimary};
@@ -62,7 +61,7 @@ export const DataHeading = styled.h3`
   line-height: 24px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: ${({ theme }) => theme.fontWeight.default};
 `;
 
 export const DataText = styled.p`
@@ -70,5 +69,5 @@ export const DataText = styled.p`
   font-size: ${({ theme }) => theme.fontSize.s};
   color: ${({ theme }) => theme.fontColor.invertedPrimary};
   line-height: 24px;
-  font-weight: 700;
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
 `;

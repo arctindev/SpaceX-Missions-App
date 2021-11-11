@@ -1,8 +1,8 @@
-To run this project u have to clone repo, open folder which includes package.json and write in terminal
+To run this project u have first create-react-app with typescript template, then add remote to git, fetch main branch from this repo, and run in terminal : 
 
 - npm install
 - then npm run start
-- then run this website link http://localhost:3000
+- then run this website by writing link http://localhost:3000 in the browser
 
 TO-DO List:
 
@@ -35,19 +35,20 @@ TO-DO List:
 16. Adding sort filter for query to get last 5 missions. (Done)
 17. Converting code to Typescript, can make "any" type workarounds, the goal is working code even without type checking. (done)
 18. Double check every file in search for "any" type workarounds. (done)
-19. Refactoring theme file for better reusability in future. (Adding MaterialUI-ish primary, secondary colors , adding theme values for border radius, margins and paddings)
+19. Refactoring theme file for better reusability in future. (Adding MaterialUI-ish primary, secondary colors , adding theme values for border radius and font weights) (done)
     - background colors (Done)
     - font colors (Done)
     - component colors (Done)
-    - margins
-    - paddings
-    - border radius
-    - font weight
+    - border radius (done)
+    - font weight (done)
 20. Write known issues and bugs in readme or in github issues in gh repo.
 21. Checking the website on another browsers than firefox.
 22. Checking SEO, accesibility, screen readers features for website.
 23. Creating loading component for better UX experience
 24. Creating error catching for api request.
 25. Writing some unit and integration tests by using testing-library.
+26. Refactoring theme styles with margins and paddings (This could be a bit time consuming)
+    - margins
+    - paddings
 26. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page / or try to improve gradient background by using css or svg.
 27. Adding good looking animation for mission change, or develop simple slider.
