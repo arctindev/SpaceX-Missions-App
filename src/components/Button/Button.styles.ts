@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 interface StyledLinkProps {
-  alt : string,
+  alt: string;
 }
 
 export const StyledLink = styled.a<StyledLinkProps>`

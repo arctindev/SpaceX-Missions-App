@@ -1,4 +1,4 @@
-To run this project u have first create-react-app with typescript template, then add remote to git, fetch main branch from this repo, and run in terminal : 
+To run this project u have first create-react-app with typescript template, then add remote to git, fetch main branch from this repo, and run in terminal :
 
 - npm install
 - then npm run start
@@ -41,14 +41,16 @@ TO-DO List:
     - component colors (Done)
     - border radius (done)
     - font weight (done)
-20. Write known issues and bugs in readme or in github issues in gh repo.
-21. Checking the website on another browsers than firefox.
-22. Checking SEO, accesibility, screen readers features for website.
-23. Creating loading component for better UX experience
-24. Creating error catching for api request.
-25. Writing some unit and integration tests by using testing-library.
-26. Refactoring theme styles with margins and paddings (This could be a bit time consuming)
+20. Write known issues and bugs in readme or in github issues in gh repo. (done)
+21. Found a way to fix imigur image very big size issue by adding function to shipCard. (done)
+22. Checking the website on another browsers than firefox. (done)
+23. Improve gradient background by using css or svg (done , not happy about firefox but looks decent on chrome and opera)
+24. Checking SEO, accesibility, screen readers features for website.
+25. Creating loading component for better UX experience
+26. Creating error catching for api request.
+27. Writing some unit and integration tests by using testing-library.
+28. Refactoring theme styles with margins and paddings (This could be a bit time consuming)
     - margins
     - paddings
-26. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page / or try to improve gradient background by using css or svg.
-27. Adding good looking animation for mission change, or develop simple slider.
+29. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page.
+30. Adding good looking animation for mission change, or develop simple slider.

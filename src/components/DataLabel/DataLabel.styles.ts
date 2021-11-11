@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { getMobileMarginValue, getDesktopMarginValue } from './DataLabelUtils';
 
 interface DataLabelWrapperProps {
-  type: string; 
+  type: string;
 }
 
 export const DataLabelWrapper = styled.div<DataLabelWrapperProps>`
@@ -20,7 +20,7 @@ export const DataLabelWrapper = styled.div<DataLabelWrapperProps>`
 `;
 
 interface DataLabelHeadingProps {
-  isHeadingBigger?: boolean; 
+  isHeadingBigger?: boolean;
 }
 
 export const DataLabelHeading = styled.h3<DataLabelHeadingProps>`
@@ -47,19 +47,18 @@ interface DataLabelTextProps {
 
 export const DataLabelText = styled.p<DataLabelTextProps>`
   display: inline;
-  font-weight: ${({ dataTextIsBig, theme }) => (dataTextIsBig ? theme.fontWeight.bold : theme.fontWeight.default)};
+  font-weight: ${({ dataTextIsBig, theme }) =>
+    dataTextIsBig ? theme.fontWeight.bold : theme.fontWeight.default};
   font-size: ${({ dataTextIsBig, theme }) =>
     dataTextIsBig ? theme.fontSize.xl : theme.fontSize.m};
-  line-height: ${({ dataTextIsBig }) =>
-    dataTextIsBig ? '40px' : '18.75px'};
+  line-height: ${({ dataTextIsBig }) => (dataTextIsBig ? '40px' : '18.75px')};
   color: ${({ theme }) => theme.fontColor.primary};
   margin-top: ${({ dataTextIsBig }) => (dataTextIsBig ? '8px' : '0px')};
 
   @media only screen and (min-width: 768px) {
     font-size: ${({ dataTextIsBig, theme }) =>
       dataTextIsBig ? theme.fontSize.xl : theme.fontSize.xm};
-    line-height: ${({ dataTextIsBig }) =>
-      dataTextIsBig ? '49px' : '21.09px'};
+    line-height: ${({ dataTextIsBig }) => (dataTextIsBig ? '49px' : '21.09px')};
   }
 
   @media only screen and (min-width: 1200px) {
