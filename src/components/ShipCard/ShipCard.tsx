@@ -7,6 +7,7 @@ import {
   DataLabelWrapper,
   DataHeading,
   DataText,
+  ShipImageWrapper,
 } from './ShipCard.styles';
 import { shipModel } from '../../api/responseModel';
 import { imgurResizeImage } from '../../utils/imgurResizeImage';
@@ -19,10 +20,12 @@ export const ShipCard = ({ shipData }: ShipCardProps) => {
   const imageLink = imgurResizeImage(shipData.image);
   return (
     <ShipCardWrapper>
-      <ShipImage
-        src={imageLink}
-        alt={`This is a picture of ship named "${shipData.name}"`}
-      ></ShipImage>
+      <ShipImageWrapper>
+        <ShipImage
+          src={imageLink}
+          alt={`This is a picture of ship named "${shipData.name}"`}
+        ></ShipImage>
+      </ShipImageWrapper>
       <ShipDetailsWrapper>
         <ShipNameHeading>{shipData.name}</ShipNameHeading>
         <DataLabelWrapper>

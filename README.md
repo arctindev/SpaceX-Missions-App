@@ -47,10 +47,10 @@ TO-DO List:
 23. Improve gradient background by using css or svg (done , not happy about firefox but looks decent on chrome and opera)
 24. Checking SEO, accesibility, screen readers features for website.
 25. Writing some unit and integration tests by using testing-library. (done)
-26. Refactoring the code for bugs if api query limit is higher with help of tests.
+26. Refactoring the code for bugs if api query limit is higher with help of tests. (done)
     - null in article link (done)
     - null in ship array (done)
-    - null in image link
+    - null in image link (done)
 27. Solving known bugs from github issues.
 28. Creating loading component for better UX experience
 29. Creating error catching for api request.
@@ -60,3 +60,10 @@ TO-DO List:
     - paddings
 32. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page.
 33. Adding good looking animation for mission change, or develop simple slider.
+
+Known Api Bugs:
+
+- There are records which have null object in links.article_link
+- There are nulls in ship array
+- there are nulls instead of links to ship images
+- There are null values in ship weight_kg

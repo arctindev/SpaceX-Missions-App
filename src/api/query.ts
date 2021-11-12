@@ -1,5 +1,5 @@
 export const queryParams = {
-  queryLimit: 5,
+  queryLimit: 10,
   querySortByLabel: 'launch_date_local',
   querySortOrder: 'DESC', // DESC | ASC
 };

@@ -7,10 +7,9 @@ const imageSize = 'l';
 // h = 1024×1024 = Huge Thumbnail
 // because of mobile max image width 520px 640x640 size might be the best option
 
-export const imgurResizeImage = (link: string): string => {
-  console.log(link);
-  if (!link) {
-    return link;
+export const imgurResizeImage = (link: string | null): string => {
+  if (link === null) {
+      throw console.error('Null in image, something is wrong with conditional rendering in ShipSection component');
   }
   if (!link.includes('imgur')) {
     return link;
