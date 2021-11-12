@@ -13,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     font-family: "roboto";
+    overflow-y: scroll;
   }
 `;
 

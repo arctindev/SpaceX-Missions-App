@@ -27,14 +27,16 @@ export const ShipCardWrapper = styled.div`
     }
   }
 `;
-
+export const ShipImageWrapper = styled.div`
+  width: 100%;
+  height: 200px;
+`;
 export const ShipImage = styled.img`
   width: 100%;
   height: 200px;
   object-fit: cover;
   object-position: 50% 65%;
   border-radius: ${({ theme }) => theme.borderRadius.topCornersM};
-  pointer-events: none;
 `;
 
 export const ShipNameHeading = styled.h2`

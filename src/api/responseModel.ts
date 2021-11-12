@@ -1,8 +1,8 @@
 export interface shipModel {
   name: string;
   home_port: string;
-  image: string;
-  weight_kg: number | null;
+  image: string | null; // bug
+  weight_kg: number | null; // bug
   id: string;
 }
 
@@ -14,7 +14,7 @@ export interface MissionDataModel {
     site_name: string;
   };
   links: {
-    article_link: string;
+    article_link: string | null; //bug
     video_link: string;
   };
   rocket: {
@@ -27,6 +27,6 @@ export interface MissionDataModel {
       ];
     };
   };
-  ships: shipModel[];
+  ships: shipModel[] | null; // bug
   id: string;
 }

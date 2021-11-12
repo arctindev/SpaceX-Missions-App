@@ -16,7 +16,11 @@ const ShipSection = ({ missionData }: ShipSectionProps) => {
       <ShipCardList>
         {missionData.ships
           ? missionData.ships.map((shipData) => {
-              return shipData ? <ShipCard key={shipData.id} shipData={shipData} /> : null;
+              return shipData ? (
+                shipData.image ? (
+                  <ShipCard key={shipData.id} shipData={shipData} />
+                ) : null
+              ) : null;
             })
           : null}
       </ShipCardList>
