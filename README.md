@@ -51,19 +51,21 @@ TO-DO List:
     - null in article link (done)
     - null in ship array (done)
     - null in image link (done)
-27. Solving known bugs from github issues.
+27. Solving known bugs from github issues. (for tomorrow - loading components issue left)
 28. Creating loading component for better UX experience
-29. Creating error catching for api request.
-30. Again Checking SEO, accesibility, screen readers features for website.
-31. Refactoring theme styles with margins and paddings (This could be a bit time consuming)
+29. Writing more test, might do some unit tests for components like DataLabel, MissionDetails, refactor root test to check if loading component is in the document while fetching data.
+30. Creating error catching for api request.
+31. Creating tests if error shows correctly.
+32. Again Checking SEO, accesibility, screen readers features for website.
+33. Refactoring theme styles with margins and paddings (This could be a bit time consuming)
     - margins
     - paddings
-32. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page.
-33. Adding good looking animation for mission change, or develop simple slider.
+34. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page.
+35. Adding good looking animation for mission change, or develop simple slider.
 
 Known Api Bugs:
 
-- There are records which have null object in links.article_link
-- There are nulls in ship array
-- there are nulls instead of links to ship images
-- There are null values in ship weight_kg
+- There are records which have null object in links.article_link (workaround was using yt link for article)
+- There are nulls in ship array (workaround was checking if shipitem is not null)
+- there are nulls instead of links to ship images (workaround was not rendering ship card if there is no img)
+- There are null values in ship weight_kg (workaround was rendering 'unknown' string )

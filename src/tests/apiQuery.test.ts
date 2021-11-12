@@ -89,19 +89,19 @@ describe('Api query response test', () => {
         // ships mapping
         if (responseObject.ships.length > 0) {
           for (let j = 0; j < responseObject.ships.length; j++) {
-            //ships - bug
+            //ships - null in array bug
             if (responseObject.ships[j] !== null) {
               expect(typeof responseObject.ships[j]).toEqual('object');
               // ships.name
               expect(typeof responseObject.ships[j].name).toEqual('string');
               // ships.home_port
               expect(typeof responseObject.ships[j].home_port).toEqual('string');
-              // ships.image - bug
+              // ships.image - null in image bug
               expect(
                 typeof responseObject.ships[j].image === 'string' ||
                   responseObject.ships[j].image === null
               ).toBeTruthy();
-              // ships.weight_kg - bug
+              // ships.weight_kg - null in weight bug
               expect(
                 typeof responseObject.ships[j].weight_kg === 'number' ||
                   responseObject.ships[j].weight_kg === null
