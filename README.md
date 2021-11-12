@@ -46,9 +46,9 @@ TO-DO List:
 22. Checking the website on another browsers than firefox. (done)
 23. Improve gradient background by using css or svg (done , not happy about firefox but looks decent on chrome and opera)
 24. Checking SEO, accesibility, screen readers features for website.
-25. Creating loading component for better UX experience
-26. Creating error catching for api request.
-27. Writing some unit and integration tests by using testing-library.
+25. Writing some unit and integration tests by using testing-library.
+26. Creating loading component for better UX experience
+27. Creating error catching for api request.
 28. Refactoring theme styles with margins and paddings (This could be a bit time consuming)
     - margins
     - paddings
