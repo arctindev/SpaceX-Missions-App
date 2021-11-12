@@ -9,21 +9,18 @@ import {
   DataText,
 } from './ShipCard.styles';
 import { shipModel } from '../../api/responseModel';
+import { imgurResizeImage } from '../../utils/imgurResizeImage';
 
 interface ShipCardProps {
   shipData: shipModel;
 }
 
 export const ShipCard = ({ shipData }: ShipCardProps) => {
-  const ScalingImageLink = () : string => {
-    let temp = shipData.image.split('.');
-    temp[temp.length -2] += 'l';
-    return temp.join('.');
-  }
+  const imageLink = imgurResizeImage(shipData.image);
   return (
     <ShipCardWrapper>
       <ShipImage
-        src={ScalingImageLink()}
+        src={imageLink}
         alt={`This is a picture of ship named "${shipData.name}"`}
       ></ShipImage>
       <ShipDetailsWrapper>

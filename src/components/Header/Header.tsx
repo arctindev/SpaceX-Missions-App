@@ -27,7 +27,7 @@ export const Header = () => {
           isActive={!blockPrevious}
           arrowType="left"
         />
-        <LogoSVG title="Website Logo"/>
+        <LogoSVG title="Website Logo" />
         <SvgArrow
           onClick={handleNextClick}
           isActive={!blockNext}

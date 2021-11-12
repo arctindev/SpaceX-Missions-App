@@ -34,6 +34,7 @@ export const ShipImage = styled.img`
   object-fit: cover;
   object-position: 50% 65%;
   border-radius: ${({ theme }) => theme.borderRadius.topCornersM};
+  pointer-events: none;
 `;
 
 export const ShipNameHeading = styled.h2`
@@ -42,7 +43,8 @@ export const ShipNameHeading = styled.h2`
   font-size: ${({ theme }) => theme.fontSize.l};
   color: ${({ theme }) => theme.fontColor.invertedPrimary};
   padding-bottom: 16px;
-  border-bottom: 1px solid ${({ theme }) => theme.componentColor.darkerSecondary};
+  border-bottom: 1px solid
+    ${({ theme }) => theme.componentColor.darkerSecondary};
   margin-bottom: 14px;
 `;
 

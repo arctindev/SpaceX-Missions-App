@@ -2,18 +2,18 @@ const colors = {
   white: '#FFFFFF',
   darkerWhite: '#F4F6FA',
   black: '#000000',
-  lighterBlack: "#323237",
+  lighterBlack: '#323237',
   gray: '#868686',
   darkGray: '#5C5C5D',
   lightGray: '#E8E8E8',
   red: '#BE4E35',
   green: '#6FB46E',
-}
+};
 
 const borderRadiusValues = {
   s: '4px',
   m: '20px',
-}
+};
 
 export const theme = {
   backgroundColor: {
@@ -43,14 +43,14 @@ export const theme = {
     xs: '12px',
   },
   borderRadius: {
-    allCornersS : borderRadiusValues.s,
-    allCornersM : borderRadiusValues.m,
-    topCornersM : `${borderRadiusValues.m} ${borderRadiusValues.m} 0 0`
+    allCornersS: borderRadiusValues.s,
+    allCornersM: borderRadiusValues.m,
+    topCornersM: `${borderRadiusValues.m} ${borderRadiusValues.m} 0 0`,
   },
   fontWeight: {
     default: '500', // also declared in globalStyle file
     bold: '700',
-  }
+  },
 };
 
 /*

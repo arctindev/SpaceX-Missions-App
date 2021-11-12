@@ -9,7 +9,9 @@ interface ButtonProps {
 
 export const Button = ({ buttonText, articleLink, isLink }: ButtonProps) =>
   isLink ? (
-    <StyledLink href={articleLink} alt={buttonText}>LEARN MORE</StyledLink>
+    <StyledLink href={articleLink} alt={buttonText}>
+      {buttonText}
+    </StyledLink>
   ) : (
     <StyledButton>{buttonText}</StyledButton>
   );
