@@ -6,8 +6,7 @@ import { Navigation } from './Header.styles';
 import { MissionContext } from '../../providers/MissionProvider';
 
 export const Header = () => {
-  const { nextMission, previousMission, blockPrevious, blockNext } =
-    useContext(MissionContext);
+  const { nextMission, previousMission, blockPrevious, blockNext } = useContext(MissionContext);
 
   const handlePreviousClick = () => {
     if (!blockPrevious) {
@@ -22,17 +21,9 @@ export const Header = () => {
   return (
     <HeaderWrapper>
       <Navigation>
-        <SvgArrow
-          onClick={handlePreviousClick}
-          isActive={!blockPrevious}
-          arrowType="left"
-        />
+        <SvgArrow onClick={handlePreviousClick} isActive={!blockPrevious} arrowType="left" />
         <LogoSVG title="Website Logo" />
-        <SvgArrow
-          onClick={handleNextClick}
-          isActive={!blockNext}
-          arrowType="right"
-        />
+        <SvgArrow onClick={handleNextClick} isActive={!blockNext} arrowType="right" />
       </Navigation>
     </HeaderWrapper>
   );

@@ -12,15 +12,13 @@ interface ShipSectionProps {
 const ShipSection = ({ missionData }: ShipSectionProps) => {
   return (
     <ShipSectionWrapper>
-      <DataLabel
-        isHeadingBigger
-        headingText="RESCUE SHIPS"
-        type="rescue_ships_label"
-      />
+      <DataLabel isHeadingBigger headingText="RESCUE SHIPS" type="rescue_ships_label" />
       <ShipCardList>
-        {missionData.ships.map((shipData) => (
-          <ShipCard key={shipData.id} shipData={shipData} />
-        ))}
+        {missionData.ships
+          ? missionData.ships.map((shipData) => {
+              return shipData ? <ShipCard key={shipData.id} shipData={shipData} /> : null;
+            })
+          : null}
       </ShipCardList>
     </ShipSectionWrapper>
   );

@@ -31,9 +31,7 @@ export const ShipCard = ({ shipData }: ShipCardProps) => {
         </DataLabelWrapper>
         <DataLabelWrapper>
           <DataHeading>WEIGHT[kg]</DataHeading>
-          <DataText>
-            {shipData.weight_kg ? shipData.weight_kg : 'Unknown'}
-          </DataText>
+          <DataText>{shipData.weight_kg ? shipData.weight_kg : 'Unknown'}</DataText>
         </DataLabelWrapper>
       </ShipDetailsWrapper>
     </ShipCardWrapper>

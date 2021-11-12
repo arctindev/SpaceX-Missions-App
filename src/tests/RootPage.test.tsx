@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '../test-utils';
 import Root from '../pages/Root';
+import { queryParams } from '../api/query';
 
 const missionLabelString1 = 'Sentinel-6 Michael Freilich';
 const missionLabelString2 = 'Crew-1';
@@ -71,9 +72,9 @@ describe('Root Tests', () => {
     expect(previousButton).not.toBeDisabled();
     expect(nextButton).not.toBeDisabled();
 
-    fireEvent.click(nextButton);
-    fireEvent.click(nextButton);
-    fireEvent.click(nextButton);
+    for (let i = 0; i < queryParams.queryLimit - 2; i++) {
+      fireEvent.click(nextButton);
+    }
 
     expect(nextButton).toBeDisabled();
     expect(previousButton).not.toBeDisabled();
@@ -83,9 +84,9 @@ describe('Root Tests', () => {
     expect(previousButton).not.toBeDisabled();
     expect(nextButton).not.toBeDisabled();
 
-    fireEvent.click(previousButton);
-    fireEvent.click(previousButton);
-    fireEvent.click(previousButton);
+    for (let i = 0; i < queryParams.queryLimit - 2; i++) {
+      fireEvent.click(previousButton);
+    }
 
     expect(previousButton).toBeDisabled();
     expect(nextButton).not.toBeDisabled();

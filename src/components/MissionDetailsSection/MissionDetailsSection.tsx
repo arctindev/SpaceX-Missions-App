@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  MissionDetailsWrapper,
-  FlexColumnWrapper,
-} from './MissionDetailsSection.styles';
+import { MissionDetailsWrapper, FlexColumnWrapper } from './MissionDetailsSection.styles';
 import { DataLabel } from '../DataLabel/DataLabel';
 import { Button } from '../Button/Button';
 import { MissionDataModel } from '../../api/responseModel';

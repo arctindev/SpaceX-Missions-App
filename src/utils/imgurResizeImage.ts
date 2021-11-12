@@ -8,6 +8,10 @@ const imageSize = 'l';
 // because of mobile max image width 520px 640x640 size might be the best option
 
 export const imgurResizeImage = (link: string): string => {
+  console.log(link);
+  if (!link) {
+    return link;
+  }
   if (!link.includes('imgur')) {
     return link;
   }

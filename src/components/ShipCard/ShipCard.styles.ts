@@ -43,8 +43,7 @@ export const ShipNameHeading = styled.h2`
   font-size: ${({ theme }) => theme.fontSize.l};
   color: ${({ theme }) => theme.fontColor.invertedPrimary};
   padding-bottom: 16px;
-  border-bottom: 1px solid
-    ${({ theme }) => theme.componentColor.darkerSecondary};
+  border-bottom: 1px solid ${({ theme }) => theme.componentColor.darkerSecondary};
   margin-bottom: 14px;
 `;
 
