@@ -13,6 +13,7 @@ export const SvgArrow = (props: SvgArrowProps) => {
   return (
     <ArrowWrapper
       {...props}
+      data-testid={props.arrowType === 'left' ? 'goPrevious' : 'goNext'}
       isActive={props.isActive}
       arrowType={props.arrowType}
       disabled={!props.isActive}
