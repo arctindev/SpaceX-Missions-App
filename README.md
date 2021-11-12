@@ -46,11 +46,17 @@ TO-DO List:
 22. Checking the website on another browsers than firefox. (done)
 23. Improve gradient background by using css or svg (done , not happy about firefox but looks decent on chrome and opera)
 24. Checking SEO, accesibility, screen readers features for website.
-25. Writing some unit and integration tests by using testing-library.
-26. Creating loading component for better UX experience
-27. Creating error catching for api request.
-28. Refactoring theme styles with margins and paddings (This could be a bit time consuming)
+25. Writing some unit and integration tests by using testing-library. (done)
+26. Refactoring the code for bugs if api query limit is higher with help of tests.
+    - null in article link (done)
+    - null in ship array (done)
+    - null in image link
+27. Solving known bugs from github issues.
+28. Creating loading component for better UX experience
+29. Creating error catching for api request.
+30. Again Checking SEO, accesibility, screen readers features for website.
+31. Refactoring theme styles with margins and paddings (This could be a bit time consuming)
     - margins
     - paddings
-29. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page.
-30. Adding good looking animation for mission change, or develop simple slider.
+32. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page.
+33. Adding good looking animation for mission change, or develop simple slider.

@@ -10,12 +10,10 @@ interface AppProvidersProps {
 
 const AppProviders = ({ children }: AppProvidersProps) => {
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyle />
-        <MissionProvider>{children}</MissionProvider>
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <MissionProvider>{children}</MissionProvider>
+    </ThemeProvider>
   );
 };
 

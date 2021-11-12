@@ -1,6 +1,12 @@
+export const queryParams = {
+  queryLimit: 5,
+  querySortByLabel: 'launch_date_local',
+  querySortOrder: 'DESC', // DESC | ASC
+};
+
 export const query = `
 {
-  launchesPast(limit: 5, sort: "launch_date_local", order: "DESC") {
+  launchesPast(limit: ${queryParams.queryLimit}, sort: "${queryParams.querySortByLabel}", order: "${queryParams.querySortOrder}") {
     mission_name
     launch_date_local
     launch_site {

@@ -28,8 +28,7 @@ export const DataLabelHeading = styled.h3<DataLabelHeadingProps>`
   font-size: ${({ isHeadingBigger, theme }) =>
     isHeadingBigger ? theme.fontSize.m : theme.fontSize.s};
   color: ${({ theme }) => theme.fontColor.secondary};
-  line-height: ${({ isHeadingBigger }) =>
-    isHeadingBigger ? '19px' : '16.41px'};
+  line-height: ${({ isHeadingBigger }) => (isHeadingBigger ? '19px' : '16.41px')};
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 7px;

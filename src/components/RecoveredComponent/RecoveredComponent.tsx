@@ -5,9 +5,7 @@ interface RecoveredComponentProps {
   isRecovered: boolean;
 }
 
-export const RecoveredComponent = ({
-  isRecovered,
-}: RecoveredComponentProps) => (
+export const RecoveredComponent = ({ isRecovered }: RecoveredComponentProps) => (
   <StyledRecoveredComponent isRecovered={isRecovered}>
     {isRecovered ? 'RECOVERED' : 'UNRECOVERED'}
   </StyledRecoveredComponent>

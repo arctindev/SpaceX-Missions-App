@@ -7,9 +7,7 @@ interface MyProps {
   children?: NonNullable<React.ReactNode>;
 }
 
-const Providers: React.FC<MyProps> = ({ children }) => (
-  <AppProviders>{children}</AppProviders>
-);
+const Providers: React.FC<MyProps> = ({ children }) => <AppProviders>{children}</AppProviders>;
 
 const customRender = (ui: React.ReactElement, options?: RenderOptions) =>
   render(ui, { wrapper: Providers, ...options });

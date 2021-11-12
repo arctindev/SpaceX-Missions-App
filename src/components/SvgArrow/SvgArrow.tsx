@@ -13,12 +13,11 @@ export const SvgArrow = (props: SvgArrowProps) => {
   return (
     <ArrowWrapper
       {...props}
+      data-testid={props.arrowType === 'left' ? 'goPrevious' : 'goNext'}
       isActive={props.isActive}
       arrowType={props.arrowType}
       disabled={!props.isActive}
-      aria-label={
-        props.arrowType === 'left' ? 'Previous mission' : 'Next mission'
-      }
+      aria-label={props.arrowType === 'left' ? 'Previous mission' : 'Next mission'}
     >
       {props.arrowType === 'left' ? (
         <ArrowLeft title="Previous mission button" />
