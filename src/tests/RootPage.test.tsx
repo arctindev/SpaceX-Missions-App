@@ -18,40 +18,43 @@ describe('Root Tests', () => {
   it('Successfuly navigate to next and previous mission', async () => {
     render(<Root />);
 
-      //If apiQuery tests are successfull you might need to check the const variables of missionLabelStrings because they could be not equal
-      let missionLabelData = await screen.findByText(missionLabelString1);
+    //If apiQuery tests are successfull you might need to check the const variables of missionLabelStrings because they could be not equal
+    let missionLabelData = await screen.findByText(missionLabelString1);
 
-      expect(missionLabelData).toBeInTheDocument();
-      expect(missionLabelData.innerHTML).toEqual(missionLabelString1);
+    expect(missionLabelData).toBeInTheDocument();
+    expect(missionLabelData.innerHTML).toEqual(missionLabelString1);
 
-      const nextButton = screen.getByTestId('goNext');
-      const previousButton = screen.getByTestId('goPrevious');
-      fireEvent.click(nextButton);
+    const nextButton = screen.getByTestId('goNext');
+    const previousButton = screen.getByTestId('goPrevious');
+    fireEvent.click(nextButton);
 
-      expect(missionLabelData).toBeInTheDocument();
-      expect(missionLabelData.innerHTML).not.toEqual(missionLabelString1);
-      expect(missionLabelData.innerHTML).toEqual(missionLabelString2);
+    expect(missionLabelData).toBeInTheDocument();
+    expect(missionLabelData.innerHTML).not.toEqual(missionLabelString1);
+    expect(missionLabelData.innerHTML).toEqual(missionLabelString2);
 
-      fireEvent.click(previousButton);
+    fireEvent.click(previousButton);
 
-      expect(missionLabelData).toBeInTheDocument();
-      expect(missionLabelData.innerHTML).not.toEqual(missionLabelString2);
-      expect(missionLabelData.innerHTML).toEqual(missionLabelString1);
+    expect(missionLabelData).toBeInTheDocument();
+    expect(missionLabelData.innerHTML).not.toEqual(missionLabelString2);
+    expect(missionLabelData.innerHTML).toEqual(missionLabelString1);
   });
 
   // =====================================================================
 
   it('Successfully disables/enables previous and next buttons', async () => {
     render(<Root />);
-    //If apiQuery tests are successfull you might need to check the const variables of missionLabelStrings because they could be not equal
-      let missionLabelData = await screen.findByText(missionLabelString1);
-
-      expect(missionLabelData).toBeInTheDocument();
-      expect(missionLabelData.innerHTML).toEqual(missionLabelString1);
-
 
     const nextButton = screen.getByTestId('goNext');
     const previousButton = screen.getByTestId('goPrevious');
+
+    expect(nextButton).toBeDisabled();
+    expect(previousButton).toBeDisabled();
+
+    //If apiQuery tests are successfull you might need to check the const variables of missionLabelStrings because they could be not equal
+    let missionLabelData = await screen.findByText(missionLabelString1);
+
+    expect(missionLabelData).toBeInTheDocument();
+    expect(missionLabelData.innerHTML).toEqual(missionLabelString1);
 
     expect(previousButton).toBeDisabled();
     expect(nextButton).not.toBeDisabled();

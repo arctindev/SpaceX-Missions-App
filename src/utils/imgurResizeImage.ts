@@ -9,7 +9,9 @@ const imageSize = 'l';
 
 export const imgurResizeImage = (link: string | null): string => {
   if (link === null) {
-      throw console.error('Null in image, something is wrong with conditional rendering in ShipSection component');
+    throw console.error(
+      'Null in image, something is wrong with conditional rendering in ShipSection component'
+    );
   }
   if (!link.includes('imgur')) {
     return link;

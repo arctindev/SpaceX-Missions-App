@@ -33,3 +33,21 @@ export const ShipCardList = styled.ul`
     justify-content: flex-start;
   }
 `;
+
+export const NoShipInfoWrapper = styled.div`
+  width: 100%;
+  max-width: 520px;
+
+  @media only screen and (min-width: 768px) {
+    max-width: 900px;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    max-width: 1140px;
+  }
+`;
+
+export const NoShipInfoText = styled.p`
+  color: ${({ theme }) => theme.fontColor.primary};
+  font-size: ${({ theme }) => theme.fontSize.m};
+`;

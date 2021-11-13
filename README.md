@@ -51,17 +51,20 @@ TO-DO List:
     - null in article link (done)
     - null in ship array (done)
     - null in image link (done)
-27. Solving known bugs from github issues. (for tomorrow - loading components issue left)
-28. Creating loading component for better UX experience
-29. Writing more test, might do some unit tests for components like DataLabel, MissionDetails, refactor root test to check if loading component is in the document while fetching data.
-30. Creating error catching for api request.
-31. Creating tests if error shows correctly.
-32. Again Checking SEO, accesibility, screen readers features for website.
-33. Refactoring theme styles with margins and paddings (This could be a bit time consuming)
+27. Solving known bugs from github issues. (Done)
+28. Creating loading component for better UX experience (done, used quick css snipped from https://loading.io/css/ , might try to get creative later on and make my own loader)
+29. Solved little bug, when data was fetching next button was active, on slower connection this might create bad experience for the user adn break the app (done)
+30. Writing more test, might do some unit tests for components like DataLabel, MissionDetails, refactor root test to check if loading component is in the document while fetching data.
+31. Creating error catching for api request.
+32. Creating tests if error shows correctly.
+33. Again Checking SEO, accesibility, screen readers features for website.
+34. Again try to get better gradient. :P
+35. Refactoring on ShipSection.
+36. Refactoring theme styles with margins and paddings (This could be a bit time consuming)
     - margins
     - paddings
-34. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page.
-35. Adding good looking animation for mission change, or develop simple slider.
+37. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page.
+38. Adding good looking animation for mission change, or develop simple slider.
 
 Known Api Bugs:
 

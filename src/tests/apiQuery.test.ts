@@ -35,7 +35,7 @@ describe('Api query response test', () => {
 
   // ====================================================================
 
-  it('successfully gets expected types of response object', async () => {
+  it('successfully gets expected types', async () => {
     try {
       const response = await axios.post(queryLink, {
         query,
