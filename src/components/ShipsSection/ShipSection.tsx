@@ -1,6 +1,10 @@
 import React from 'react';
-import { ShipSectionWrapper } from './ShipSection.styles';
-import { ShipCardList } from './ShipSection.styles';
+import {
+  ShipSectionWrapper,
+  ShipCardList,
+  NoShipInfoWrapper,
+  NoShipInfoText,
+} from './ShipSection.styles';
 import { ShipCard } from '../ShipCard/ShipCard';
 import { DataLabel } from '../DataLabel/DataLabel';
 import { MissionDataModel } from '../../api/responseModel';
@@ -13,17 +17,22 @@ const ShipSection = ({ missionData }: ShipSectionProps) => {
   return (
     <ShipSectionWrapper>
       <DataLabel isHeadingBigger headingText="RESCUE SHIPS" type="rescue_ships_label" />
-      <ShipCardList>
-        {missionData.ships
-          ? missionData.ships.map((shipData) => {
-              return shipData ? (
-                shipData.image ? (
-                  <ShipCard key={shipData.id} shipData={shipData} />
-                ) : null
-              ) : null;
-            })
-          : null}
-      </ShipCardList>
+      {missionData.ships && missionData.ships.length > 0 &&
+      missionData.ships.filter((shipData) => shipData != null && shipData.image != null).length > 0 ? (
+        <ShipCardList>
+          {missionData.ships.map((shipData) => {
+            return shipData ? (
+              shipData.image ? (
+                <ShipCard key={shipData.id} shipData={shipData} />
+              ) : null
+            ) : null;
+          })}
+        </ShipCardList>
+      ) : (
+        <NoShipInfoWrapper>
+          <NoShipInfoText>Ships used in this mission are unknown.</NoShipInfoText>
+        </NoShipInfoWrapper>
+      )}
     </ShipSectionWrapper>
   );
 };

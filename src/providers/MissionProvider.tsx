@@ -30,7 +30,7 @@ export const MissionProvider = ({ children }: MissionProviderProps) => {
   const [currentMissionData, setCurrentMissionData] = useState();
   const [currentMission, setCurrentMission] = useState(0);
   const [blockPrevious, setBlockPrevious] = useState(true);
-  const [blockNext, setBlockNext] = useState(false);
+  const [blockNext, setBlockNext] = useState(true);
 
   const nextMission = (): void => {
     if (currentMission === missions.length - 2) {
@@ -58,6 +58,7 @@ export const MissionProvider = ({ children }: MissionProviderProps) => {
       .then(({ data: { data } }) => {
         setMissions(data.launchesPast);
         setCurrentMissionData(data.launchesPast[0]);
+        setBlockNext(false);
       })
       .catch(() => {
         console.log('error');
