@@ -14,6 +14,7 @@ interface DataLabelProps {
   };
   isHeadingBigger?: boolean;
   longerData?: string;
+  screenReaderHelper?: string;
   onMouseEnter?: React.MouseEventHandler<HTMLParagraphElement> | undefined;
   onMouseLeave?: React.MouseEventHandler<HTMLParagraphElement> | undefined;
 }
@@ -26,6 +27,7 @@ export const DataLabel = ({
   hasRecoveredComponent,
   isHeadingBigger,
   longerData,
+  screenReaderHelper
 }: DataLabelProps) => {
   const [showDetails, setShowDetails] = useState(false);
 
@@ -39,7 +41,7 @@ export const DataLabel = ({
 
   return (
     <DataLabelWrapper type={type}>
-      <DataLabelHeading isHeadingBigger={isHeadingBigger}>{headingText}</DataLabelHeading>
+      <DataLabelHeading isHeadingBigger={isHeadingBigger} aria-label={screenReaderHelper && screenReaderHelper}>{headingText}</DataLabelHeading>
       {data && (
         <DataLabelText
           onMouseEnter={type === 'launch_site' ? handleMouseEnter : undefined}

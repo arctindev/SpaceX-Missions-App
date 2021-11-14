@@ -14,6 +14,6 @@ export const TemplateWrapper = styled.div`
   @media only screen and (min-width: 1200px) {
     grid-template-rows: 150px 1fr;
     background: ${({ theme }) =>
-      `linear-gradient(135deg, ${theme.backgroundColor.secondary} 15%, ${theme.backgroundColor.primary} 100%)`};
+      `linear-gradient(150deg, ${theme.backgroundColor.secondary} 15%, ${theme.backgroundColor.primary} 100%)`};
   }
 `;

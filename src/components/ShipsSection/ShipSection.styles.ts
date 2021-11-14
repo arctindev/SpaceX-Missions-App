@@ -37,6 +37,7 @@ export const ShipCardList = styled.ul`
 export const NoShipInfoWrapper = styled.div`
   width: 100%;
   max-width: 520px;
+  margin: auto;
 
   @media only screen and (min-width: 768px) {
     max-width: 900px;

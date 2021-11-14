@@ -17,8 +17,10 @@ const ShipSection = ({ missionData }: ShipSectionProps) => {
   return (
     <ShipSectionWrapper>
       <DataLabel isHeadingBigger headingText="RESCUE SHIPS" type="rescue_ships_label" />
-      {missionData.ships && missionData.ships.length > 0 &&
-      missionData.ships.filter((shipData) => shipData != null && shipData.image != null).length > 0 ? (
+      {missionData.ships &&
+      missionData.ships.length > 0 &&
+      missionData.ships.filter((shipData) => shipData != null && shipData.image != null).length >
+        0 ? (
         <ShipCardList>
           {missionData.ships.map((shipData) => {
             return shipData ? (

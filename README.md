@@ -55,16 +55,17 @@ TO-DO List:
 28. Creating loading component for better UX experience (done, used quick css snipped from https://loading.io/css/ , might try to get creative later on and make my own loader)
 29. Solved little bug, when data was fetching next button was active, on slower connection this might create bad experience for the user adn break the app (done)
 30. Writing more test, might do some unit tests for components like DataLabel, MissionDetails, refactor root test to check if loading component is in the document while fetching data.
-31. Creating error catching for api request.
-32. Creating tests if error shows correctly.
-33. Again Checking SEO, accesibility, screen readers features for website.
+31. Again Checking SEO, accesibility, screen readers features for website. (Done)
+32. Creating error catching for api request.
+33. Creating more tests for example if error shows correctly.
 34. Again try to get better gradient. :P
 35. Refactoring on ShipSection.
-36. Refactoring theme styles with margins and paddings (This could be a bit time consuming)
+36. Refactoring images in ship cards, might add some placeholder for images if possible (have to do some reasearch)
+37. Refactoring theme styles with margins and paddings (This could be a bit time consuming)
     - margins
     - paddings
-37. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page.
-38. Adding good looking animation for mission change, or develop simple slider.
+38. Depends on time left, might try to create basic static server using express/fastify to serve static files and create custom 404 page.
+39. Adding good looking animation for mission change, or develop simple slider.
 
 Known Api Bugs:
 
