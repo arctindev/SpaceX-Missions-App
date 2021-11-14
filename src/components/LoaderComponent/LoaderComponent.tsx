@@ -3,7 +3,7 @@ import { StyledLoaderWrapper, LoaderAnimation } from './LoaderComponent.styles';
 
 const LoaderComponent = () => {
   return (
-    <StyledLoaderWrapper>
+    <StyledLoaderWrapper data-testid="Loader">
       <LoaderAnimation>
         <div />
         <div />

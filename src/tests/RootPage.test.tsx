@@ -15,6 +15,20 @@ describe('Root Tests', () => {
 
   // =====================================================================
 
+  it('Renders loader component correctly', async () => {
+    render(<Root />);
+
+    const loaderComponent = screen.getByTestId('Loader');
+    expect(loaderComponent).toBeInTheDocument();
+
+    const missionLabelHeader = await screen.findByText(/MISSION/);
+    expect(missionLabelHeader).toBeInTheDocument();
+
+    expect(loaderComponent).not.toBeInTheDocument();
+  });
+
+  // =====================================================================
+
   it('Successfuly navigate to next and previous mission', async () => {
     render(<Root />);
 

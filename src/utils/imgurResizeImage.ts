@@ -1,10 +1,12 @@
-const imageSize = 'l';
-// s =   90×  90 = Small Square
-// b =  160× 160 = Big Square
-// t =  160× 160 = Small Thumbnail
-// m =  320× 320 = Medium Thumbnail
-// l =  640× 640 = Large Thumbnail
-// h = 1024×1024 = Huge Thumbnail
+const imageSizeValues = {
+  size90x90: 's',
+  size160x160: 'b',
+  size320x320: 'm',
+  size640x640: 'l',
+  size1024x1024: 'h',
+};
+const imageSize = imageSizeValues.size640x640;
+
 // because of mobile max image width 520px 640x640 size might be the best option
 
 export const imgurResizeImage = (link: string | null): string => {

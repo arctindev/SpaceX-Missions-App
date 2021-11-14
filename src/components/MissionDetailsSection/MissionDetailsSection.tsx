@@ -3,6 +3,7 @@ import { MissionDetailsWrapper, FlexColumnWrapper } from './MissionDetailsSectio
 import { DataLabel } from '../DataLabel/DataLabel';
 import { Button } from '../Button/Button';
 import { MissionDataModel } from '../../api/responseModel';
+import ScreenReaderHeader from '../ScreenReaderHeader/ScreenReaderHeader';
 
 interface MissionDetailsSectionProps {
   missionData: MissionDataModel;
@@ -11,12 +12,14 @@ interface MissionDetailsSectionProps {
 const MissionDetailsSection = ({ missionData }: MissionDetailsSectionProps) => {
   return (
     <MissionDetailsWrapper>
+      <ScreenReaderHeader headingText="Mission Details" type="h1" />
       <FlexColumnWrapper>
         <DataLabel
           dataTextIsBig
           headingText="MISSION"
           data={missionData.mission_name}
           type="mission_label"
+          screenReaderHelper="Mission name"
         />
         <DataLabel
           hasRecoveredComponent={{
@@ -25,6 +28,7 @@ const MissionDetailsSection = ({ missionData }: MissionDetailsSectionProps) => {
           headingText="ROCKET"
           data={missionData.rocket.rocket_name}
           type="rocket_name_label"
+          screenReaderHelper="Rocket name"
         />
         <Button
           isLink

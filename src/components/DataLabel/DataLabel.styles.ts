@@ -23,7 +23,7 @@ interface DataLabelHeadingProps {
   isHeadingBigger?: boolean;
 }
 
-export const DataLabelHeading = styled.h3<DataLabelHeadingProps>`
+export const DataLabelHeading = styled.h2<DataLabelHeadingProps>`
   font-weight: ${({ theme }) => theme.fontWeight.default};
   font-size: ${({ isHeadingBigger, theme }) =>
     isHeadingBigger ? theme.fontSize.m : theme.fontSize.s};

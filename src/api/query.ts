@@ -1,3 +1,5 @@
+// Changing queryParams keys might broke test cases
+
 export const queryParams = {
   queryLimit: 10,
   querySortByLabel: 'launch_date_local',

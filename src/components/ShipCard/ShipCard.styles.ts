@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const ShipCardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 520px;
   min-height: 340px;
@@ -28,9 +30,11 @@ export const ShipCardWrapper = styled.div`
   }
 `;
 export const ShipImageWrapper = styled.div`
+  order: 0;
   width: 100%;
   height: 200px;
 `;
+
 export const ShipImage = styled.img`
   width: 100%;
   height: 200px;
@@ -39,7 +43,7 @@ export const ShipImage = styled.img`
   border-radius: ${({ theme }) => theme.borderRadius.topCornersM};
 `;
 
-export const ShipNameHeading = styled.h2`
+export const ShipNameText = styled.p`
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   line-height: 24px;
   font-size: ${({ theme }) => theme.fontSize.l};
@@ -50,6 +54,7 @@ export const ShipNameHeading = styled.h2`
 `;
 
 export const ShipDetailsWrapper = styled.div`
+  order: 1;
   padding: 17px 15px 20px 15px;
 `;
 
