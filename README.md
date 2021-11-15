@@ -56,7 +56,7 @@ TO-DO List:
 29. Solved little bug, when data was fetching next button was active, on slower connection this might create bad experience for the user adn break the app (done)
 30. Writing more test, might do some unit tests for components like DataLabel, MissionDetails, refactor root test to check if loading component is in the document while fetching data.
 31. Again Checking SEO, accesibility, screen readers features for website. (Done)
-32. Creating error catching for api request.
+32. Creating error catching for api request. (done)
 33. Creating more tests for example if error shows correctly.
 34. Again try to get better gradient. :P
 35. Refactoring on ShipSection.

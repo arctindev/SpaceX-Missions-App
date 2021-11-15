@@ -10,6 +10,7 @@ interface MissionContextProps {
   previousMission: () => void;
   blockPrevious: boolean;
   blockNext: boolean;
+  isError: boolean;
 }
 
 export const MissionContext = React.createContext<MissionContextProps>({
@@ -19,6 +20,7 @@ export const MissionContext = React.createContext<MissionContextProps>({
   previousMission: () => {},
   blockPrevious: true,
   blockNext: false,
+  isError: false,
 });
 
 interface MissionProviderProps {
@@ -31,6 +33,7 @@ export const MissionProvider = ({ children }: MissionProviderProps) => {
   const [currentMission, setCurrentMission] = useState(0);
   const [blockPrevious, setBlockPrevious] = useState(true);
   const [blockNext, setBlockNext] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   const nextMission = (): void => {
     if (currentMission === missions.length - 2) {
@@ -62,6 +65,7 @@ export const MissionProvider = ({ children }: MissionProviderProps) => {
       })
       .catch(() => {
         console.log('error');
+        setIsError(true);
       });
   }, []);
 
@@ -74,6 +78,7 @@ export const MissionProvider = ({ children }: MissionProviderProps) => {
         previousMission,
         blockPrevious,
         blockNext,
+        isError,
       }}
     >
       {children}
