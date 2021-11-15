@@ -4,7 +4,8 @@ interface RecoveredComponentProps {
   isRecovered: boolean;
 }
 
-export const StyledRecoveredComponent = styled.span<RecoveredComponentProps>`
+export const StyledRecoveredComponent = styled.p<RecoveredComponentProps>`
+  display: inline;
   color: ${({ theme }) => theme.fontColor.invertedPrimary};
   background-color: green;
   margin-left: 9px;

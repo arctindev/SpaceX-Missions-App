@@ -49,10 +49,10 @@ export const DataLabel = ({
           dataTextIsBig={dataTextIsBig}
         >
           {data}
-          {hasRecoveredComponent && <RecoveredComponent isRecovered={hasRecoveredComponent.data} />}
           {showDetails && <ShowMoreComponent data={longerData} />}
         </DataLabelText>
       )}
+      {hasRecoveredComponent && <RecoveredComponent isRecovered={hasRecoveredComponent.data} />}
     </DataLabelWrapper>
   );
 };

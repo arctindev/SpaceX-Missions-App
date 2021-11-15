@@ -25,4 +25,4 @@ const renderWithTheme = (ui: React.ReactElement, options?: RenderOptions) =>
 export * from '@testing-library/react';
 export { renderWithTheme as renderWithTheme };
 export { customRender as render };
-export { userEvent as userEvent };
+export { userEvent };
